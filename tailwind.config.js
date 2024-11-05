@@ -18,6 +18,7 @@ module.exports = {
           headline: "#D1D5DB", // Headline
           body: "#9CA3AF", // Body
           caption: "#6B7280", // Caption
+          outline: "#565656", // Button and Input Outline
         },
       },
       fontFamily: {

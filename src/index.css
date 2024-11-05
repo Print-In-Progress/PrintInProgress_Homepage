@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.primary-button {
+    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 px-7 py-3 text-lg font-bold bg-gradient-to-r text-gray-headline from-edconnect-blue to-primary
+}
+
+.secondary-button {
+    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 px-7 py-3 text-lg font-bold text-gray-headline bg-gray-outline bg-opacity-10 border border-gray-outline border-opacity-20 bg-blend-color-burn
+}
+
+.outlined-button {
+    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 px-7 py-3 text-lg font-bold text-primary bg-transparent border-primary border-2
+}
+
+.elevated-button {
+    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 px-7 py-3 text-lg font-bold bg-gradient-to-r text-gray-headline from-primary to-secondary shadow-lg
+}
+
+.primary-input {
+    @apply rounded-full w-fit px-5 py-3 text-lg bg-gray-outline bg-opacity-10 border border-gray-outline border-opacity-20 text-gray-display
+}
+
+.outlined-input {
+    @apply rounded-full w-fit px-5 py-3 text-lg bg-transparent border-gray-outline border-opacity-20 border-2
+}
