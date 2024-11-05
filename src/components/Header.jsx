@@ -1,18 +1,19 @@
 import React, { useContext } from "react";
 import { NavContext } from "../contexts/NavContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import HamburgerMenuButton from "./HamburgerMenuButton";
 
 const Header = () => {
+  const navigate = useNavigate();
   const { active, setActive } = useContext(NavContext);
 
   const links = [
-    { title: "Products", href: "/products" },
-    { title: "Pricing", href: "/pricing" },
-    { title: "Why edConnect?", href: "/why-edconnect" },
-    { title: "Contact Us", href: "/contact-us" },
-    { title: "Documentation", href: "/eocumentation" },
+    { title: "Products", onClick: () => navigate("/products") },
+    { title: "Pricing", onClick: () => navigate("/pricing") },
+    { title: "Why edConnect?", onClick: () => console.log("") },
+    { title: "Contact Us", onClick: () => console.log("") },
+    { title: "Documentation", onClick: () => navigate("/documentation") },
   ];
 
   return (
@@ -31,9 +32,9 @@ const Header = () => {
       {/* Desktop Navbar */}
       <section className="text-menu-text hidden flex-row gap-6 sm:flex">
         {links.map((link, index) => (
-          <Link key={link.title + index} to={link.href}>
+          <button key={link.title + index} onClick={link.onClick}>
             {link.title}
-          </Link>
+          </button>
         ))}
       </section>
     </nav>
