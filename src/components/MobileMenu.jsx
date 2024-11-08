@@ -1,68 +1,112 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { navigationLinks } from "../config/navigationConfig";
 
 const MobileMenu = ({ active, setActive }) => {
   const navigate = useNavigate();
+  const [expandedDropdown, setExpandedDropdown] = useState(null);
+  const menuRef = useRef(null);
 
-  const links = [
-    {
-      title: "Products",
-      onClick: () => {
-        navigate("/products");
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if click is outside the menu and the menu is active
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !(
+          event.target.closest("button")?.getAttribute("aria-label") ===
+          "Toggle mobile menu"
+        )
+      ) {
         setActive(false);
-      },
-    },
-    {
-      title: "Pricing",
-      onClick: () => {
-        navigate("/pricing");
-        setActive(false);
-      },
-    },
-    {
-      title: "Why edConnect?",
-      onClick: () => {
-        console.log("");
-        setActive(false);
-      },
-    },
-    {
-      title: "Contact Us",
-      onClick: () => {
-        console.log("");
-        setActive(false);
-      },
-    },
-    {
-      title: "Documentation",
-      onClick: () => {
-        navigate("/documentation");
-        setActive(false);
-      },
-    },
-  ];
+        setExpandedDropdown(null);
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [setActive]);
+
+  const handleItemClick = (item) => {
+    if (item.isDropdown) {
+      setExpandedDropdown(expandedDropdown === item.title ? null : item.title);
+    } else {
+      navigate(item.path);
+      setActive(false);
+    }
+  };
+
+  const handleDropdownOptionClick = (path) => {
+    navigate(path);
+    setActive(false);
+    setExpandedDropdown(null);
+  };
 
   return (
     <AnimatePresence>
       {active && (
         <motion.div
+          ref={menuRef}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           className="absolute left-0 right-0 top-20 z-50 flex flex-col gap-2 border-b border-gray-headline border-opacity-10 bg-navbar-bg bg-opacity-95 p-4 backdrop-blur-button"
         >
-          {links.map((link, index) => (
-            <motion.button
-              key={link.title + index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              onClick={link.onClick}
-              className="w-full rounded-lg py-2 text-left text-body text-gray-display hover:bg-white/10"
-            >
-              {link.title}
-            </motion.button>
+          {navigationLinks.map((item, index) => (
+            <div key={item.title + index}>
+              <motion.button
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                onClick={() => handleItemClick(item)}
+                className="flex w-full flex-row items-center justify-between rounded-lg py-2 text-left text-body text-gray-display hover:bg-white/10"
+              >
+                <span>{item.title}</span>
+                {item.isDropdown && (
+                  <motion.span
+                    animate={{
+                      rotate: expandedDropdown === item.title ? 180 : 0,
+                    }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    ▼
+                  </motion.span>
+                )}
+              </motion.button>
+
+              {/* Dropdown Content */}
+              <AnimatePresence>
+                {item.isDropdown && expandedDropdown === item.title && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="ml-4 flex flex-col overflow-hidden"
+                  >
+                    {item.options.map((option, optionIndex) => (
+                      <motion.button
+                        key={option.title + optionIndex}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: optionIndex * 0.1 }}
+                        onClick={() => handleDropdownOptionClick(option.path)}
+                        className="rounded-lg py-2 text-left text-body text-gray-display hover:bg-white/10"
+                      >
+                        {option.title}
+                      </motion.button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           ))}
         </motion.div>
       )}
