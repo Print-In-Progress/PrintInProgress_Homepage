@@ -18,11 +18,11 @@ const DesktopDropdownItem = ({ options, isOpen, setActiveDropdown }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-full z-50 mt-1 w-48 rounded-lg bg-navbar-bg bg-opacity-95 p-2 backdrop-blur-button"
+          className="absolute top-full z-[100] mt-1 w-48 rounded-lg bg-navbar-bg bg-opacity-95 p-2 backdrop-blur-button"
         >
           {options.map((option, index) => (
             <button
-              key={option.title + index}
+              key={index}
               onClick={() => handleClick(option.path)}
               className="w-full rounded-md px-4 py-2 text-left text-caption text-gray-display transition-colors hover:bg-white/10"
             >

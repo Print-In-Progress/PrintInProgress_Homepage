@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import DesktopDropdownItem from "./DesktopDropdownItem";
 import { navigationLinks } from "../config/navigationConfig";
 
 const DesktopNavbar = () => {
   const navigate = useNavigate();
-  const items = navigationLinks;
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const navRef = useRef(null);
+
+  // Handle clicking outside of navbar
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleClick = (item) => {
     if (item.isDropdown) {
@@ -18,10 +30,12 @@ const DesktopNavbar = () => {
   };
 
   return (
-    <section className="text-menu-text hidden flex-row gap-6 sm:flex">
-      {items.map((item, index) => (
+    <section
+      ref={navRef}
+      className="text-menu-text hidden flex-row gap-6 sm:flex"
+    >
+      {navigationLinks.map((item, index) => (
         <div key={item.title + index} className="relative">
-          {/* Always Visible Nav Button */}
           <button
             onClick={() => handleClick(item)}
             className="relative hover:text-gray-700"
@@ -29,7 +43,6 @@ const DesktopNavbar = () => {
             {item.title}
           </button>
 
-          {/* Optional Dropdown Nav Button */}
           {item.isDropdown && (
             <DesktopDropdownItem
               options={item.options}

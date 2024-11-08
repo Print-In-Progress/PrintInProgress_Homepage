@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import HamburgerMenuButton from "./HamburgerMenuButton";
 import MobileMenu from "./MobileMenu";
 import DesktopNavbar from "./DesktopNavbar";
 
 const Header = () => {
-  const { active, setActive } = useState(false);
+  const [active, setActive] = useState(false);
 
   return (
     <header className="relative">
