@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { NavContext } from "../contexts/NavContext";
 
-const MobileMenu = () => {
+const MobileMenu = ({ active, setActive }) => {
   const navigate = useNavigate();
-  const { active, setActive } = useContext(NavContext);
 
   const links = [
     {

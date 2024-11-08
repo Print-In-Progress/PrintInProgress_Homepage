@@ -1,21 +1,12 @@
-import React, { useContext } from "react";
-import { NavContext } from "../contexts/NavContext";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import HamburgerMenuButton from "./HamburgerMenuButton";
 import MobileMenu from "./MobileMenu";
+import DesktopNavbar from "./DesktopNavbar";
 
 const Header = () => {
-  const navigate = useNavigate();
-  const { active, setActive } = useContext(NavContext);
-
-  const links = [
-    { title: "Products", onClick: () => navigate("/products") },
-    { title: "Pricing", onClick: () => navigate("/pricing") },
-    { title: "Why edConnect?", onClick: () => console.log("") },
-    { title: "Contact Us", onClick: () => console.log("") },
-    { title: "Documentation", onClick: () => navigate("/documentation") },
-  ];
+  const { active, setActive } = useState(false);
 
   return (
     <header className="relative">
@@ -32,18 +23,12 @@ const Header = () => {
         </section>
 
         {/* Desktop Navbar */}
-        <section className="text-menu-text hidden flex-row gap-6 sm:flex">
-          {links.map((link, index) => (
-            <button key={link.title + index} onClick={link.onClick}>
-              {link.title}
-            </button>
-          ))}
-        </section>
+        <DesktopNavbar />
       </nav>
 
       {/* Mobile Menu Dropdown */}
       <div className="sm:hidden">
-        <MobileMenu />
+        <MobileMenu active={active} setActive={setActive} />
       </div>
     </header>
   );
