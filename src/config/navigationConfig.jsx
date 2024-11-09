@@ -29,15 +29,15 @@ export const navigationLinks = [
     options: [
       {
         title: "Get in touch",
-        path: "/contact",
+        path: "/contact/general",
       },
       {
         title: "Support Portal",
-        path: "/support",
+        path: "/contact/support",
       },
       {
         title: "Idea Portal",
-        path: "/ideas",
+        path: "/contact/ideas",
       },
     ],
   },

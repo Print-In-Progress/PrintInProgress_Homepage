@@ -3,25 +3,42 @@
 @tailwind utilities;
 
 .primary-button {
-    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 bg-gradient-to-r from-edconnect-blue to-primary
+    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 bg-gradient-to-r from-edconnect-blue to-primary;
 }
 
 .secondary-button {
-    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 bg-gray-outline bg-opacity-10 border border-gray-outline border-opacity-20 bg-blend-color-burn
+    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 bg-gray-outline bg-opacity-10 border border-gray-outline border-opacity-20 bg-blend-color-burn;
 }
 
 .outlined-button {
-    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 text-primary bg-transparent border-primary border-2
+    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 text-primary bg-transparent border-primary border-2;
 }
 
 .elevated-button {
-    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 bg-gradient-to-r from-primary to-secondary shadow-lg
+    @apply w-fit rounded-full hover:opacity-85 active:opacity-70 transition-opacity duration-150 bg-gradient-to-r from-primary to-secondary shadow-lg;
 }
 
 .primary-input {
-    @apply rounded-full w-fit px-5 py-3 text-lg bg-gray-outline bg-opacity-10 border border-gray-outline border-opacity-20 text-gray-display
+    @apply w-full rounded-full px-5 py-3 text-lg bg-gray-outline bg-opacity-10 border border-gray-outline border-opacity-20 text-gray-display;
+}
+
+.primary-textarea {
+    @apply w-full rounded-lg px-5 py-3 text-lg bg-gray-outline bg-opacity-10 border border-gray-outline border-opacity-20 text-gray-display;
+}
+
+.primary-select {
+    @apply w-full appearance-none rounded-full px-5 py-3 text-lg bg-gray-outline bg-opacity-10 border border-gray-outline border-opacity-20 text-gray-display;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23D1D5DB'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5rem;
+    padding-right: 2.5rem;
+}
+
+.primary-select option {
+    @apply bg-navbar-bg text-gray-display;
 }
 
 .outlined-input {
-    @apply rounded-full w-fit px-5 py-3 text-lg bg-transparent border-gray-outline border-opacity-20 border-2
+    @apply w-full rounded-full px-5 py-3 text-lg bg-transparent border-gray-outline border-opacity-20 border-2;
 }
