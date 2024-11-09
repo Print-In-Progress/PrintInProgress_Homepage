@@ -1,25 +1,29 @@
 import React from "react";
-import GlassCard from "../components/cards/GlassCard";
 import { useNavigate } from "react-router-dom";
+import GlassCard from "../components/GlassCard";
 
 const Products = () => {
   const navigate = useNavigate();
 
+  // PlaceholderImages
   const components = [
     {
       title: "edConnect Admin Panel",
       description:
         "The Admin Panel is your intuitive management and administration panel. You can administer all your modules from here. You will be able to send push notifications directly to your users' phones, edit and publish articles, events, and much more. The Admin Panel will be accessible online either from your own domain or with a custom subdomain assigned by us, such as admin-yourname.printinprogress.net. Experience the power of efficient management with the edConnect Admin Panel.",
+      imageUrl: "placegolderImage",
     },
     {
       title: "edConnect Mobile",
       description:
         "edConnect Mobile allows your students, employees or teachers to access all the content you publish and utilize all other modules on the go. The app is available for download on the App and Play Store for all your users.",
+      imageUrl: "placegolderImage",
     },
     {
       title: "edConnect Web",
       description:
         "The web version of edConnect Mobile. Your users will be able to access the same information as on edConnect Mobile from any device using your custom domain or a custom subdomain assigned by us, such as yourname.printinprogress.net.",
+      imageUrl: "placegolderImage",
     },
   ];
 
@@ -29,18 +33,20 @@ const Products = () => {
       title: "User Management",
       description:
         "Core module for managing user accounts, roles, and permissions across the platform.",
+      imageUrl: "placegolderImage",
     },
     {
       title: "Push Notifications",
       description:
         "Send instant updates and notifications to all users through mobile and web platforms",
+      imageUrl: "placegolderImage",
     },
   ];
 
   return (
     <div className="mb-5 mt-5 flex flex-col gap-10 px-3 py-2">
       {/* Components Overview Section */}
-      <section className="mx-auto w-full max-w-7xl px-10">
+      <section className="mx-auto w-full max-w-7xl px-5">
         <h1 className="mb-6 text-display-md text-gray-display">
           Components Overview
         </h1>
@@ -59,13 +65,14 @@ const Products = () => {
               key={index}
               heading={component.title}
               text={component.description}
+              imageUrl={component.imageUrl}
             />
           ))}
         </div>
       </section>
 
       {/* Modules Section */}
-      <section className="mx-auto w-full max-w-7xl px-10">
+      <section className="mx-auto w-full max-w-7xl px-5">
         <h2 className="mb-6 text-display-md text-gray-display">
           Modules Overview
         </h2>
@@ -77,6 +84,7 @@ const Products = () => {
               key={index}
               heading={module.title}
               text={module.description}
+              imageUrl={module.imageUrl}
             />
           ))}
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import HeroElement from "../components/HeroElement";
 import { useNavigate } from "react-router-dom";
-import GlassCard from "../components/cards/GlassCard";
+import GlassCard from "../components/GlassCard.jsx";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const Home = () => {
           </button>
         </span>
 
-        <p className="relative mx-auto w-full max-w-7xl px-10 text-body text-gray-headline sm:text-headline">
+        <p className="relative mx-auto w-full max-w-7xl px-5 text-body text-gray-headline sm:text-headline">
           The edConnect System gets publication, communication and data sharing
           within your school, school newspaper or university to the next level,
           making it interactive and more efficient than ever before. For
@@ -50,7 +50,7 @@ const Home = () => {
         </p>
 
         {/* Benefit Cards Grid */}
-        <section className="relative mx-auto w-full max-w-7xl items-center justify-center px-10">
+        <section className="relative mx-auto w-full max-w-7xl items-center justify-center px-5">
           <span className="grid w-fit grid-rows-1 justify-center gap-5 sm:grid-cols-2 md:grid-cols-3">
             {benefits.map((benefit, index) => (
               <GlassCard
