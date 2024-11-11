@@ -12,7 +12,7 @@ const HamburgerMenuButton = ({ active, setActive }) => {
       <motion.button
         onClick={() => setActive(!active)}
         animate={active ? "open" : "closed"}
-        className="relative h-11 w-11 rounded-full bg-white/0 transition-colors hover:bg-white/20"
+        className="relative flex h-11 w-11 flex-col justify-around rounded-full bg-white/0 transition-colors hover:bg-white/20"
       >
         <motion.span
           style={{

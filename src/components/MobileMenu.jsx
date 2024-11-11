@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { navigationLinks } from "../config/navigationConfig";
@@ -6,34 +6,6 @@ import { navigationLinks } from "../config/navigationConfig";
 const MobileMenu = ({ active, setActive }) => {
   const navigate = useNavigate();
   const [expandedDropdown, setExpandedDropdown] = useState(null);
-  const menuRef = useRef(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      // Check if click is outside the menu and the menu is active
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        !(
-          event.target.closest("button")?.getAttribute("aria-label") ===
-          "Toggle mobile menu"
-        )
-      ) {
-        setActive(false);
-        setExpandedDropdown(null);
-      }
-    };
-
-    // Add event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("touchstart", handleClickOutside);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside);
-    };
-  }, [setActive]);
 
   const handleItemClick = (item) => {
     if (item.isDropdown) {
@@ -54,7 +26,6 @@ const MobileMenu = ({ active, setActive }) => {
     <AnimatePresence>
       {active && (
         <motion.div
-          ref={menuRef}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
@@ -82,7 +53,6 @@ const MobileMenu = ({ active, setActive }) => {
                 )}
               </motion.button>
 
-              {/* Dropdown Content */}
               <AnimatePresence>
                 {item.isDropdown && expandedDropdown === item.title && (
                   <motion.div
