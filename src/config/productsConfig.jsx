@@ -15,7 +15,6 @@ export const components = [
   },
   {
     id: "edconnect-web",
-    title: "edConnect Admin Panel",
     title: "edConnect Web",
     description:
       "The web version of edConnect Mobile. Your users will be able to access the same information as on edConnect Mobile from any device using your custom domain or a custom subdomain assigned by us, such as yourname.printinprogress.net.",
