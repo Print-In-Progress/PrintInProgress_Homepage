@@ -8,7 +8,6 @@ export const components = [
   },
   {
     id: "edconnect-mobile",
-    title: "edConnect Admin Panel",
     title: "edConnect Mobile",
     description:
       "edConnect Mobile allows your students, employees or teachers to access all the content you publish and utilize all other modules on the go. The app is available for download on the App and Play Store for all your users.",

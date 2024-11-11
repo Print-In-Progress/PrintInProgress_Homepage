@@ -1,15 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { footerLinks } from "../config/navigationConfig";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  // Placeholder Links
-  const links = [
-    { name: "Terms of Service", href: "/" },
-    { name: "Privacy Policy", href: "/" },
-    { name: "Legal Notice", href: "/" },
-  ];
 
   return (
     <footer className="relative border-t border-gray-300 border-opacity-10 bg-navbar-bg bg-opacity-20 backdrop-blur-button">
@@ -17,13 +11,13 @@ const Footer = () => {
         <div className="flex flex-col space-y-6 sm:space-y-8">
           {/* Links - Responsive grid that becomes vertical on mobile */}
           <nav className="grid auto-rows-auto grid-cols-1 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-8">
-            {links.map((link) => (
+            {footerLinks.map((item, index) => (
               <Link
-                key={link.name}
-                to={link.href}
+                key={item.title + index}
+                to={item.path}
                 className="w-full text-center text-body text-gray-body transition-all duration-200 hover:text-gray-display sm:w-auto sm:text-left"
               >
-                {link.name}
+                {item.title}
               </Link>
             ))}
           </nav>

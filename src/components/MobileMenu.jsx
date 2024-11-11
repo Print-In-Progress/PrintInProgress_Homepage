@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { navigationLinks } from "../config/navigationConfig";
+import { headerLinks } from "../config/navigationConfig";
 
 const MobileMenu = ({ active, setActive }) => {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const MobileMenu = ({ active, setActive }) => {
           exit={{ opacity: 0, y: -20 }}
           className="absolute left-0 right-0 top-20 z-50 flex flex-col gap-2 border-b border-gray-headline border-opacity-10 bg-navbar-bg bg-opacity-95 p-4 backdrop-blur-button"
         >
-          {navigationLinks.map((item, index) => (
+          {headerLinks.map((item, index) => (
             <div key={item.title + index}>
               <motion.button
                 initial={{ opacity: 0, x: -20 }}

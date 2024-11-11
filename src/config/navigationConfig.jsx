@@ -1,4 +1,4 @@
-export const navigationLinks = [
+export const headerLinks = [
   {
     title: "Products",
     isDropdown: false,
@@ -45,5 +45,20 @@ export const navigationLinks = [
     title: "Documentation",
     isDropdown: false,
     path: "/documentation",
+  },
+];
+
+export const footerLinks = [
+  {
+    title: "Terms Of Service",
+    path: "/terms-of-service",
+  },
+  {
+    title: "Privacy Policy",
+    path: "/privacy-policy",
+  },
+  {
+    title: "Legal Notice",
+    path: "/legal-notice",
   },
 ];
