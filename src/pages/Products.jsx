@@ -1,47 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import GlassCard from "../components/GlassCard";
+import { components, modules } from "../config/productsConfig";
 
 const Products = () => {
   const navigate = useNavigate();
-
-  // PlaceholderImages
-  const components = [
-    {
-      title: "edConnect Admin Panel",
-      description:
-        "The Admin Panel is your intuitive management and administration panel. You can administer all your modules from here. You will be able to send push notifications directly to your users' phones, edit and publish articles, events, and much more. The Admin Panel will be accessible online either from your own domain or with a custom subdomain assigned by us, such as admin-yourname.printinprogress.net. Experience the power of efficient management with the edConnect Admin Panel.",
-      imageUrl: "placegolderImage",
-    },
-    {
-      title: "edConnect Mobile",
-      description:
-        "edConnect Mobile allows your students, employees or teachers to access all the content you publish and utilize all other modules on the go. The app is available for download on the App and Play Store for all your users.",
-      imageUrl: "placegolderImage",
-    },
-    {
-      title: "edConnect Web",
-      description:
-        "The web version of edConnect Mobile. Your users will be able to access the same information as on edConnect Mobile from any device using your custom domain or a custom subdomain assigned by us, such as yourname.printinprogress.net.",
-      imageUrl: "placegolderImage",
-    },
-  ];
-
-  // Placeholder for Modules
-  const modules = [
-    {
-      title: "User Management",
-      description:
-        "Core module for managing user accounts, roles, and permissions across the platform.",
-      imageUrl: "placegolderImage",
-    },
-    {
-      title: "Push Notifications",
-      description:
-        "Send instant updates and notifications to all users through mobile and web platforms",
-      imageUrl: "placegolderImage",
-    },
-  ];
 
   return (
     <div className="mb-5 mt-5 flex flex-col gap-10 px-3 py-2">
@@ -78,12 +41,12 @@ const Products = () => {
         </h2>
 
         {/* Modules Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {modules.map((module, index) => (
+        <div className="grid gap-6 md:grid-cols-2">
+          {modules.map((module) => (
             <GlassCard
-              key={index}
+              key={module.id}
               heading={module.title}
-              text={module.description}
+              descriptions={module.description}
               imageUrl={module.imageUrl}
             />
           ))}
