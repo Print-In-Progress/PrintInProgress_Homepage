@@ -7,7 +7,7 @@ const Layout = () => {
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
   const [desktopDropdownActive, setDesktopDropdownActive] = useState(null);
 
-  // Close Navbar if clicked anywhere on the page
+  // Close Dropdown if clicked anywhere on the page
   const handlePageClick = () => {
     if (mobileMenuActive) {
       setMobileMenuActive(false);
@@ -18,10 +18,7 @@ const Layout = () => {
   };
 
   return (
-    <div
-      onClick={handlePageClick}
-      className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-gradient-dark"
-    >
+    <div className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-gradient-dark">
       {/* Ensure header is above all content */}
       <div className="relative z-50">
         <Header
@@ -32,12 +29,13 @@ const Layout = () => {
         />
       </div>
 
+      {/* Close Dropdown when clicked anywhere but the Header (its handeled seperately) */}
       {/* Main content */}
-      <main className="relative z-0">
+      <main onClick={handlePageClick} className="relative z-0">
         <Outlet />
       </main>
       {/* Footer */}
-      <div className="relative z-10">
+      <div onClick={handlePageClick} className="relative z-10">
         <Footer />
       </div>
     </div>

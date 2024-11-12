@@ -20,13 +20,11 @@ const Header = ({
   };
 
   return (
-    <nav
-      onClick={handlePageClick}
-      className="relative flex flex-row items-center justify-between border-b border-gray-headline border-opacity-10 bg-navbar-bg bg-opacity-20 px-3 py-3 text-caption text-gray-display backdrop-blur-button sm:px-4"
-    >
-      <section>
+    <nav className="relative flex flex-row items-center justify-between border-b border-gray-headline border-opacity-10 bg-navbar-bg bg-opacity-20 px-3 py-3 text-caption text-gray-display backdrop-blur-button sm:px-4">
+      {/* Section to close Dropdown when clicked */}
+      <section onClick={handlePageClick}>
         <Link to="/">
-          <img src={Logo} className="ml-1 h-14 sm:ml-0" alt="Logo" />
+          <img src={Logo} className="h-14 w-fit" alt="Logo" />
         </Link>
       </section>
 
