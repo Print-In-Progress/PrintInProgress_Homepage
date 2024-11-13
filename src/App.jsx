@@ -5,13 +5,14 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Pricing from "./pages/Pricing";
-import Documentation from "./pages/Documentation";
 import Services from "./pages/Services";
 import Privacy from "./pages/Privacy";
 import Contact from "./pages/Contact";
 import TermsOfService from "./pages/TermsOfService";
 import Policy from "./pages/Policy";
 import LegalNotice from "./pages/LegalNotice";
+import DocumentationLayout from "./layouts/DocumentationLayout";
+import Documentation from "./pages/Documentation";
 
 const App = () => {
   return (
@@ -21,12 +22,16 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/documentation" element={<Documentation />} />
           <Route path="/services" element={<Services />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<Policy />} />
           <Route path="/legal-notice" element={<LegalNotice />} />
+
+          <Route element={<DocumentationLayout />}>
+            <Route path="/documentation" element={<Documentation />} />
+            <Route path="/documentation/:section" element={<Documentation />} />
+          </Route>
 
           {/* Combined Contact routes */}
           <Route path="/contact/:type" element={<Contact />} />

@@ -24,7 +24,7 @@ const Header = ({
       {/* Section to close Dropdown when clicked */}
       <section onClick={handlePageClick}>
         <Link to="/">
-          <img src={Logo} className="h-14 w-fit" alt="Logo" />
+          <img src={Logo} className="h-14" alt="Logo" />
         </Link>
       </section>
 

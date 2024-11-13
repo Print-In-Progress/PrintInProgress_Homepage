@@ -13,7 +13,7 @@ const Contact = () => {
   };
 
   // Validate and redirect if invalid type
-  React.useEffect(() => {
+  useEffect(() => {
     const validTypes = ["general", "support", "ideas"];
     if (!validTypes.includes(type)) {
       navigate("/contact/general", { replace: true });
