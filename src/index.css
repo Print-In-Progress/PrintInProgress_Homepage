@@ -42,3 +42,7 @@
 .outlined-input {
     @apply w-full rounded-full px-5 py-3 text-lg bg-transparent border-gray-outline border-opacity-20 border-2;
 }
+
+.input-error-message {
+    @apply text-sm text-red-500 font-bold
+}

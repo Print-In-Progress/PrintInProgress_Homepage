@@ -1,11 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import GlassCard from "../components/GlassCard";
-import { components, modules } from "../config/productsConfig";
+import ModuleCard from "../components/ModuleCard";
+import { components, moduleCategories } from "../config/productsConfig";
 
 const Products = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="mb-5 mt-5 flex flex-col gap-10 px-3 py-2">
       {/* Components Overview Section */}
@@ -40,15 +38,32 @@ const Products = () => {
           Modules Overview
         </h2>
 
-        {/* Modules Grid */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {modules.map((module) => (
-            <GlassCard
-              key={module.id}
-              heading={module.title}
-              descriptions={module.description}
-              imageUrl={module.imageUrl}
-            />
+        {/* Modules Categories */}
+        <div className="flex flex-col gap-12">
+          {Object.entries(moduleCategories).map(([categoryId, category]) => (
+            <div key={categoryId} className="flex flex-col gap-6">
+              <div className="flex flex-col gap-2">
+                <h3 className="text-display-sm text-gray-display">
+                  {category.title}
+                </h3>
+                <p className="text-body text-gray-body">
+                  {category.description}
+                </p>
+              </div>
+
+              {/* Modules Grid for each category */}
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {category.modules.map((module) => (
+                  <ModuleCard
+                    key={module.id}
+                    title={module.title}
+                    descriptions={module.description}
+                    imageUrl={module.imageUrl}
+                    status={module.status}
+                  />
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>

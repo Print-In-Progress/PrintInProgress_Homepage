@@ -25,20 +25,29 @@ const DocumentationLayout = () => {
       <aside
         className={`${
           isSidebarOpen ? "absolute bottom-0 left-0 top-0 z-40" : "hidden"
-        } h-full w-64 overflow-auto bg-[#020617] md:relative md:block`}
+        } w-auto min-w-[240px] max-w-[280px] overflow-hidden bg-[#020617] md:relative md:block`}
       >
         <Sidebar
           backgroundColor="transparent"
+          width="auto"
           rootStyles={{
             ".ps-submenu-content": {
               backgroundColor: "#020617 !important",
             },
             ".ps-sidebar-container": {
+              height: "100%",
               border: "none !important",
+              width: "100%",
+            },
+            ".ps-menu-button": {
+              whiteSpace: "normal",
+              height: "auto",
+              padding: "8px 16px",
             },
             "&": {
-              borderRight: "none", // Removes any right border
-              boxShadow: "none", // Removes any box shadow
+              borderRight: "none",
+              boxShadow: "none",
+              width: "100%",
             },
           }}
         >

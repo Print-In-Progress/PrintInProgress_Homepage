@@ -1,6 +1,5 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import FormField from "./FormField";
 
 const priorityOptions = [
   { value: "low", label: "Low" },
@@ -16,7 +15,7 @@ const ideaTypeOptions = [
   { value: "other", label: "Other" },
 ];
 
-const ContactForm = ({ type, onSubmit }) => {
+const ContactForm = ({ type, submitFunction }) => {
   const {
     register,
     handleSubmit,
@@ -33,82 +32,120 @@ const ContactForm = ({ type, onSubmit }) => {
     },
   });
 
-  const onSubmitForm = (data) => {
-    onSubmit(data);
+  const onSubmit = handleSubmit((formData) => {
+    submitFunction(formData);
     reset();
-  };
+  });
 
   return (
-    <form onSubmit={handleSubmit(onSubmitForm)} className="flex flex-col gap-6">
-      <FormField
-        label="Name"
-        error={errors.name?.message}
-        {...register("name", {
-          required: "Name is required",
-          minLength: {
-            value: 2,
-            message: "Name must be at least 2 characters",
-          },
-        })}
-      />
-
-      <FormField
-        label="Email"
-        type="email"
-        error={errors.email?.message}
-        {...register("email", {
-          required: "Email is required",
-          pattern: {
-            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-            message: "Invalid email address",
-          },
-        })}
-      />
-
-      {type === "support" && (
-        <FormField
-          label="Priority"
-          type="select"
-          options={priorityOptions}
-          error={errors.priority?.message}
-          {...register("priority")}
+    <form onSubmit={onSubmit} className="flex flex-col gap-6">
+      <label className="flex flex-col gap-2 text-body text-gray-display">
+        Name
+        <input
+          type="text"
+          className="primary-input"
+          {...register("name", {
+            required: "Name is required",
+            minLength: {
+              value: 2,
+              message: "Name must be at least 2 characters",
+            },
+          })}
         />
+        {errors.name && (
+          <span className="input-error-message">{errors.name.message}</span>
+        )}
+      </label>
+
+      <label className="flex flex-col gap-2 text-body text-gray-display">
+        Email
+        <input
+          type="email"
+          className="primary-input"
+          {...register("email", {
+            required: "Email is required",
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: "Invalid email address",
+            },
+          })}
+        />
+        {errors.email && (
+          <span className="input-error-message">{errors.email.message}</span>
+        )}
+      </label>
+
+      {type == "support" && (
+        <label className="flex flex-col gap-2 text-body text-gray-display">
+          Priority
+          <select className="primary-select w-full" {...register("priority")}>
+            {priorityOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+          {errors.priority && (
+            <span className="input-error-message">
+              {errors.priority.message}
+            </span>
+          )}
+        </label>
       )}
 
-      {type === "ideas" && (
-        <FormField
-          label="Idea Type"
-          type="select"
-          options={ideaTypeOptions}
-          error={errors.ideaType?.message}
-          {...register("ideaType")}
-        />
+      {type == "ideas" && (
+        <label className="flex flex-col gap-2 text-body text-gray-display">
+          Idea Type
+          <select className="primary-select w-full" {...register("ideaType")}>
+            {ideaTypeOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+          {errors.ideaType && (
+            <span className="input-error-message">
+              {errors.ideaType.message}
+            </span>
+          )}
+        </label>
       )}
 
-      <FormField
-        label="Subject"
-        error={errors.subject?.message}
-        {...register("subject", {
-          required: "Subject is required",
-          minLength: {
-            value: 3,
-            message: "Subject must be at least 3 characters",
-          },
-        })}
-      />
+      <label className="flex flex-col gap-2 text-body text-gray-display">
+        Subject
+        <input
+          type="text"
+          className="primary-input"
+          {...register("subject", {
+            required: "Subject is required",
+            minLength: {
+              value: 3,
+              message: "Subject must be at least 3 characters",
+            },
+          })}
+        />
+        {errors.subject && (
+          <span className="input-error-message">{errors.subject.message}</span>
+        )}
+      </label>
 
-      <FormField
-        label="Message"
-        type="textarea"
-        error={errors.message?.message}
-        {...register("message", {
-          required: "Message is required",
-          minLength: {
-            value: 10,
-            message: "Message must be at least 10 characters",
-          },
-        })}
-      />
+      <label className="flex flex-col gap-2 text-body text-gray-display">
+        Message
+        <textarea
+          type="textarea"
+          className="primary-textarea min-h-52 w-full"
+          {...register("message", {
+            required: "Message is required",
+            minLength: {
+              value: 10,
+              message: "Message must be at least 10 characters",
+            },
+          })}
+        />
+        {errors.message && (
+          <span className="input-error-message">{errors.message.message}</span>
+        )}
+      </label>
 
       <button
         type="submit"

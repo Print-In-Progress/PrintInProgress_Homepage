@@ -16,6 +16,7 @@ const NavigationSection = ({ currentType }) => {
       >
         Get in Touch
       </button>
+
       <button
         onClick={() => navigate("/contact/support")}
         className={`rounded-full px-6 py-2 text-body transition-all ${
@@ -26,6 +27,7 @@ const NavigationSection = ({ currentType }) => {
       >
         Support Portal
       </button>
+
       <button
         onClick={() => navigate("/contact/ideas")}
         className={`rounded-full px-6 py-2 text-body transition-all ${
