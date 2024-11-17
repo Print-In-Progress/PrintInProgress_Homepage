@@ -18,7 +18,7 @@ const DesktopNavbar = ({ activeDropdown, setActiveDropdown }) => {
 
   return (
     <section className="text-menu-text hidden flex-row gap-6 sm:flex">
-      {headerLinks.map((item, index) => (
+      {headerLinks().map((item, index) => (
         <div
           key={item.title + index}
           className="relative"

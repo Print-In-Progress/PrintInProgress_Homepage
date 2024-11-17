@@ -1,26 +1,25 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import HeroElement from "../components/HeroElement";
 import { useNavigate } from "react-router-dom";
 import GlassCard from "../components/GlassCard.jsx";
 
 const Home = () => {
+  const { t } = useTranslation("home");
   const navigate = useNavigate();
 
   const benefits = [
     {
-      title: "Intuitive",
-      description:
-        "Effortless to navigate and adaptable to your school's needs, edConnect minimizes setup time with smart automation. Spend less time on tech, and more time on what matters most— supporting students.",
+      title: t("benefits.intuitive.title"),
+      description: t("benefits.intuitive.description"),
     },
     {
-      title: "Connected",
-      description:
-        "With a unified system for Extracurricular and learning management, edConnect empowers educators and students to access everything they need, saving time and reducing complexity.",
+      title: t("benefits.connected.title"),
+      description: t("benefits.connected.description"),
     },
     {
-      title: "Engaging",
-      description:
-        "edConnect keeps students engaged and fosters school spirit.",
+      title: t("benefits.engaging.title"),
+      description: t("benefits.engaging.description"),
     },
   ];
 
@@ -36,17 +35,12 @@ const Home = () => {
             onClick={() => navigate("/products")}
             className="elevated-button px-7 py-5 text-headline font-bold text-gray-small sm:text-display-sm"
           >
-            edConnect Features
+            {t("features")}
           </button>
         </span>
 
         <p className="relative mx-auto w-full max-w-7xl px-5 text-body text-gray-headline sm:text-headline">
-          The edConnect System gets publication, communication and data sharing
-          within your school, school newspaper or university to the next level,
-          making it interactive and more efficient than ever before. For
-          institutions or districts, with unique requirements, we also offer the
-          option to develop a fully customized system built on the edConnect
-          platform, tailored to meet your specific needs and objectives.
+          {t("mainDescription")}
         </p>
 
         {/* Benefit Cards Grid */}

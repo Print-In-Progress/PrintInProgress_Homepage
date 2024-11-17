@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "connect": "Verbinden",
+    "your": "Sie Ihre",
+    "rotatingWords": {
+      "school": "Schule",
+      "organization": "Organisation",
+      "university": "Universität"
+    }
+  },
+  "mainDescription": "Das edConnect System bringt Veröffentlichung, Kommunikation und Datenaustausch in Ihrer Schule, Schülerzeitung oder Universität auf die nächste Ebene und macht sie interaktiver und effizienter als je zuvor. Für Institutionen oder Bezirke mit besonderen Anforderungen bieten wir auch die Option, ein vollständig angepasstes System auf Basis der edConnect-Plattform zu entwickeln, das auf Ihre spezifischen Bedürfnisse und Ziele zugeschnitten ist.",
+  "benefits": {
+    "intuitive": {
+      "title": "Intuitiv",
+      "description": "Einfach zu navigieren und anpassbar an die Bedürfnisse Ihrer Schule, minimiert edConnect die Einrichtungszeit durch intelligente Automatisierung. Verbringen Sie weniger Zeit mit Technik und mehr Zeit mit dem, was am wichtigsten ist - der Unterstützung von Schülern."
+    },
+    "connected": {
+      "title": "Vernetzt",
+      "description": "Mit einem einheitlichen System für außerschulische Aktivitäten und Lernmanagement ermöglicht edConnect Pädagogen und Schülern den Zugriff auf alles, was sie benötigen, spart Zeit und reduziert Komplexität."
+    },
+    "engaging": {
+      "title": "Engagierend",
+      "description": "edConnect hält Schüler engagiert und fördert den Schulgeist."
+    }
+  },
+  "features": "edConnect Funktionen"
+}

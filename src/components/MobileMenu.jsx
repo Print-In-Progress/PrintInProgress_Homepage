@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { headerLinks } from "../config/navigationConfig";
 
-const MobileMenu = ({ active, setActive }) => {
+const MobileMenu = ({ active, setActive, headerLinks }) => {
   const navigate = useNavigate();
   const [expandedDropdown, setExpandedDropdown] = useState(null);
 

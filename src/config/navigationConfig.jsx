@@ -1,64 +1,74 @@
-export const headerLinks = [
-  {
-    title: "Products",
-    isDropdown: false,
-    path: "/products",
-  },
-  {
-    title: "Pricing",
-    isDropdown: false,
-    path: "/pricing",
-  },
-  {
-    title: "Why edConnect?",
-    isDropdown: true,
-    options: [
-      {
-        title: "Additional Services & Consultancy",
-        path: "/services",
-      },
-      {
-        title: "Privacy",
-        path: "/privacy",
-      },
-    ],
-  },
-  {
-    title: "Contact Us",
-    isDropdown: true,
-    options: [
-      {
-        title: "Get in touch",
-        path: "/contact/general",
-      },
-      {
-        title: "Support Portal",
-        path: "/contact/support",
-      },
-      {
-        title: "Idea Portal",
-        path: "/contact/ideas",
-      },
-    ],
-  },
-  {
-    title: "Documentation",
-    isDropdown: false,
-    path: "/documentation",
-  },
-];
+import { useTranslation } from "react-i18next";
 
-export const footerLinks = [
-  {
-    title: "Terms Of Service",
-    path: "/terms-of-service",
-  },
-  {
-    title: "Privacy Policy",
-    path: "/privacy-policy",
-  },
-  {
-    title: "Legal Notice",
-    path: "/legal-notice",
-  },
-];
+export const headerLinks = () => {
+  const { t } = useTranslation();
+
+  return [
+    {
+      title: t("header.products"),
+      isDropdown: false,
+      path: "/products",
+    },
+    {
+      title: t("header.pricing"),
+      isDropdown: false,
+      path: "/pricing",
+    },
+    {
+      title: t("header.whyEdConnect"),
+      isDropdown: true,
+      options: [
+        {
+          title: t("header.services"),
+          path: "/services",
+        },
+        {
+          title: t("header.privacy"),
+          path: "/privacy",
+        },
+      ],
+    },
+    {
+      title: t("header.contactUs"),
+      isDropdown: true,
+      options: [
+        {
+          title: t("header.getInTouch"),
+          path: "/contact/general",
+        },
+        {
+          title: t("header.supportPortal"),
+          path: "/contact/support",
+        },
+        {
+          title: t("header.ideaPortal"),
+          path: "/contact/ideas",
+        },
+      ],
+    },
+    {
+      title: t("header.documentation"),
+      isDropdown: false,
+      path: "/documentation",
+    },
+  ];
+};
+
+export const footerLinks = () => {
+  const { t } = useTranslation();
+
+  return [
+    {
+      title: t("footer.termsOfService"),
+      path: "/terms-of-service",
+    },
+    {
+      title: t("footer.privacyPolicy"),
+      path: "/privacy-policy",
+    },
+    {
+      title: t("footer.legalNotice"),
+      path: "/legal-notice",
+    },
+  ];
+};
