@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import ImageWithFallback from "./ImageWithFallback";
 import PlaceholderImage from "../assets/PlaceholderImage.png";
 
 const ModuleCard = ({ title, descriptions, imageUrl, status }) => {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -13,13 +15,12 @@ const ModuleCard = ({ title, descriptions, imageUrl, status }) => {
         {/* Status Badge */}
         <div className="absolute right-4 top-4 z-10">
           <span
-            className={`rounded-full border px-3 py-1 text-sm font-medium backdrop-blur-md ${
-              status === "Done"
+            className={`rounded-full border px-3 py-1 text-sm font-medium backdrop-blur-md ${status === t("status.done")
                 ? "border-green-500/50 bg-green-500/10 text-green-400"
-                : status === "In Progress"
+                : status === t("status.in_progress")
                   ? "border-yellow-500/50 bg-yellow-500/10 text-yellow-400"
                   : "border-blue-500/50 bg-blue-500/10 text-blue-400"
-            }`}
+              }`}
           >
             {status}
           </span>
@@ -46,9 +47,9 @@ const ModuleCard = ({ title, descriptions, imageUrl, status }) => {
         <div className="mt-auto p-4">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm text-gray-display transition-colors hover:bg-primary/90"
+            className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm text-gray-display transition-colors hover:bg-primary/90"
           >
-            {isExpanded ? "Hide Details" : "Show Details"}
+            {isExpanded ? t("buttons.hide_details") : t("buttons.show_details")}
             <motion.span
               animate={{ rotate: isExpanded ? 180 : 0 }}
               transition={{ duration: 0.3 }}
