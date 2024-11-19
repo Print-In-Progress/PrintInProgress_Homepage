@@ -8,7 +8,7 @@ const Products = () => {
   const { t } = useTranslation("products");
 
   return (
-    <div className="mb-5 mt-5 flex flex-col gap-10 px-3 py-2">
+    <div className="scrollbar-hide mb-5 mt-5 flex flex-col gap-10 overflow-y-scroll px-3 py-2">
       {/* Components Overview Section */}
       <section className="mx-auto w-full max-w-7xl px-5">
         <h1 className="mb-6 text-display-md text-gray-display">

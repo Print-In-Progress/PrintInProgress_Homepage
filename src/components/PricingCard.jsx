@@ -5,7 +5,7 @@ const PricingCard = ({
   price,
   priceDescription,
   features,
-  buttonText = "Contact Sales",
+  buttonText,
   onButtonClick,
 }) => {
   return (
