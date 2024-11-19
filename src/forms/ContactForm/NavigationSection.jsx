@@ -1,8 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const NavigationSection = ({ currentType }) => {
   const navigate = useNavigate();
+
+  const { t } = useTranslation("contact");
 
   return (
     <div className="mb-8 flex flex-wrap gap-4">
@@ -14,7 +17,7 @@ const NavigationSection = ({ currentType }) => {
             : "bg-gray-outline bg-opacity-10 text-gray-body hover:bg-opacity-20"
         }`}
       >
-        Get in Touch
+        {t("navigation.getInTouch")}
       </button>
 
       <button
@@ -25,7 +28,7 @@ const NavigationSection = ({ currentType }) => {
             : "bg-gray-outline bg-opacity-10 text-gray-body hover:bg-opacity-20"
         }`}
       >
-        Support Portal
+        {t("navigation.supportPortal")}
       </button>
 
       <button
@@ -36,7 +39,7 @@ const NavigationSection = ({ currentType }) => {
             : "bg-gray-outline bg-opacity-10 text-gray-body hover:bg-opacity-20"
         }`}
       >
-        Idea Portal
+        {t("navigation.ideaPortal")}
       </button>
     </div>
   );

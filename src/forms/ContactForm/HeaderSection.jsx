@@ -1,16 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const HeaderSection = ({ type }) => {
+  const { t } = useTranslation("contact");
+
   const formTitles = {
-    general: "Get in Touch",
-    support: "Support Portal",
-    ideas: "Share Your Ideas",
+    general: t("forms.general.title"),
+    support: t("forms.support.title"),
+    ideas: t("forms.ideas.title"),
   };
 
   const formDescriptions = {
-    general: "Have a question about edConnect? We'd love to hear from you.",
-    support: "Need technical assistance? Our support team is here to help.",
-    ideas: "Share your ideas to help us improve edConnect.",
+    general: t("forms.general.description"),
+    support: t("forms.support.description"),
+    ideas: t("forms.ideas.description"),
   };
 
   return (

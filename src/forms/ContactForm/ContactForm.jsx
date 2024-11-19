@@ -1,21 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 
-const priorityOptions = [
-  { value: "low", label: "Low" },
-  { value: "normal", label: "Normal" },
-  { value: "high", label: "High" },
-  { value: "urgent", label: "Urgent" },
-];
-
-const ideaTypeOptions = [
-  { value: "feature", label: "New Feature" },
-  { value: "improvement", label: "Improvement" },
-  { value: "integration", label: "Integration" },
-  { value: "other", label: "Other" },
-];
-
 const ContactForm = ({ type, submitFunction }) => {
+  const { t } = useTranslation("contact");
+
   const {
     register,
     handleSubmit,
@@ -37,18 +26,32 @@ const ContactForm = ({ type, submitFunction }) => {
     reset();
   });
 
+  const priorityOptions = [
+    { value: "low", label: t("priorities.low") },
+    { value: "normal", label: t("priorities.normal") },
+    { value: "high", label: t("priorities.high") },
+    { value: "urgent", label: t("priorities.urgent") },
+  ];
+
+  const ideaTypeOptions = [
+    { value: "feature", label: t("ideaTypes.feature") },
+    { value: "improvement", label: t("ideaTypes.improvement") },
+    { value: "integration", label: t("ideaTypes.integration") },
+    { value: "other", label: t("ideaTypes.other") },
+  ];
+
   return (
     <form onSubmit={onSubmit} className="flex flex-col gap-6">
       <label className="flex flex-col gap-2 text-body text-gray-display">
-        Name
+        {t("labels.name")}
         <input
           type="text"
           className="primary-input"
           {...register("name", {
-            required: "Name is required",
+            required: t("validation.required.name"),
             minLength: {
               value: 2,
-              message: "Name must be at least 2 characters",
+              message: t("validation.minLength.name"),
             },
           })}
         />
@@ -58,15 +61,15 @@ const ContactForm = ({ type, submitFunction }) => {
       </label>
 
       <label className="flex flex-col gap-2 text-body text-gray-display">
-        Email
+        {t("labels.email")}
         <input
           type="email"
           className="primary-input"
           {...register("email", {
-            required: "Email is required",
+            required: t("validation.required.email"),
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: "Invalid email address",
+              message: t("validation.email"),
             },
           })}
         />
@@ -77,7 +80,7 @@ const ContactForm = ({ type, submitFunction }) => {
 
       {type == "support" && (
         <label className="flex flex-col gap-2 text-body text-gray-display">
-          Priority
+          {t("labels.priority")}
           <select className="primary-select w-full" {...register("priority")}>
             {priorityOptions.map((option) => (
               <option key={option.value} value={option.value}>
@@ -95,7 +98,7 @@ const ContactForm = ({ type, submitFunction }) => {
 
       {type == "ideas" && (
         <label className="flex flex-col gap-2 text-body text-gray-display">
-          Idea Type
+          {t("labels.ideaType")}
           <select className="primary-select w-full" {...register("ideaType")}>
             {ideaTypeOptions.map((option) => (
               <option key={option.value} value={option.value}>
@@ -112,15 +115,15 @@ const ContactForm = ({ type, submitFunction }) => {
       )}
 
       <label className="flex flex-col gap-2 text-body text-gray-display">
-        Subject
+        {t("labels.subject")}
         <input
           type="text"
           className="primary-input"
           {...register("subject", {
-            required: "Subject is required",
+            required: t("validation.required.subject"),
             minLength: {
               value: 3,
-              message: "Subject must be at least 3 characters",
+              message: t("validation.minLength.subject"),
             },
           })}
         />
@@ -130,15 +133,15 @@ const ContactForm = ({ type, submitFunction }) => {
       </label>
 
       <label className="flex flex-col gap-2 text-body text-gray-display">
-        Message
+        {t("labels.message")}
         <textarea
           type="textarea"
           className="primary-textarea min-h-52 w-full"
           {...register("message", {
-            required: "Message is required",
+            required: t("validation.required.message"),
             minLength: {
               value: 10,
-              message: "Message must be at least 10 characters",
+              message: t("validation.minLength.message"),
             },
           })}
         />
@@ -151,7 +154,7 @@ const ContactForm = ({ type, submitFunction }) => {
         type="submit"
         className="primary-button mt-4 px-8 py-3 text-body text-gray-display"
       >
-        Submit
+        {t("buttons.submit")}
       </button>
     </form>
   );

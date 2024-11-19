@@ -9,17 +9,25 @@ const resources = {
     home: await import("./locales/en/home.json").then((m) => m.default),
     products: await import("./locales/en/products.json").then((m) => m.default),
     pricing: await import("./locales/en/pricing.json").then((m) => m.default),
+    contact: await import("./locales/en/contact.json").then((m) => m.default),
   },
   de: {
     common: await import("./locales/de/common.json").then((m) => m.default),
     home: await import("./locales/de/home.json").then((m) => m.default),
     products: await import("./locales/de/products.json").then((m) => m.default),
     pricing: await import("./locales/de/pricing.json").then((m) => m.default),
+    contact: await import("./locales/de/contact.json").then((m) => m.default),
   },
 };
 
 // Define available namespaces
-const AVAILABLE_NAMESPACES = ["common", "home", "products", "pricing"];
+const AVAILABLE_NAMESPACES = [
+  "common",
+  "home",
+  "products",
+  "pricing",
+  "contact",
+];
 
 // Define supported languages
 const SUPPORTED_LANGUAGES = ["en", "de"];

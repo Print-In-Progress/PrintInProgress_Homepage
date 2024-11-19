@@ -17,8 +17,9 @@ const Layout = () => {
     }
   };
 
+  // Overflow-x-hidden because else you get a scrollbar when the Contact us desktop navbar dropdown is active
   return (
-    <div className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-gradient-dark">
+    <div className="grid min-h-screen grid-rows-[auto_1fr_auto] overflow-x-hidden bg-gradient-dark">
       {/* Ensure header is above all content */}
       <div className="relative z-50">
         <Header
