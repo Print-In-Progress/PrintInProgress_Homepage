@@ -1,93 +1,127 @@
-export const sections = [
-  {
-    title: "Getting Started",
-    items: [
-      { title: "Introduction", path: "intro" },
-      { title: "Quick Start", path: "quickstart" },
-      { title: "Installation", path: "installation" },
-    ],
-  },
-  {
-    title: "Components",
-    items: [
-      { title: "Admin Panel", path: "admin-panel" },
-      { title: "Mobile App", path: "mobile-app" },
-      { title: "Web Interface", path: "web-interface" },
-    ],
-  },
-  {
-    title: "Modules",
-    items: [
-      { title: "Newspaper", path: "newspaper" },
-      { title: "Events", path: "events" },
-      { title: "Push Notifications", path: "notifications" },
-      { title: "User Management", path: "user-management" },
-      { title: "Surveys", path: "surveys" },
-    ],
-  },
-];
+import { useTranslation } from "react-i18next";
 
-export const documentationContent = {
-  intro: {
-    section: "Getting Started",
-    title: "Introduction",
-    content:
-      "Welcome to edConnect documentation. This guide will help you get started with our platform...",
-  },
-  quickstart: {
-    section: "Getting Started",
-    title: "Quick Start",
-    content: "Follow these steps to quickly set up your edConnect instance...",
-  },
-  installation: {
-    section: "Getting Started",
-    title: "Installation",
-    content: "Detailed installation instructions for different environments...",
-  },
-  "admin-panel": {
-    section: "Components",
-    title: "Admin Panel",
-    content:
-      "The Admin Panel is your central hub for managing all aspects of edConnect...",
-  },
-  "mobile-app": {
-    section: "Components",
-    title: "Mobile App",
-    content:
-      "The edConnect mobile app provides on-the-go access to all features...",
-  },
-  "web-interface": {
-    section: "Components",
-    title: "Web Interface",
-    content: "The web interface provides a comprehensive platform for users...",
-  },
-  newspaper: {
-    section: "Modules",
-    title: "Newspaper Module",
-    content:
-      "The Newspaper module allows schools to create and manage their digital publications...",
-  },
-  events: {
-    section: "Modules",
-    title: "Events Module",
-    content:
-      "Manage and coordinate school events efficiently with our Events module...",
-  },
-  notifications: {
-    section: "Modules",
-    title: "Push Notifications",
-    content:
-      "Keep your school community informed with instant push notifications...",
-  },
-  "user-management": {
-    section: "Modules",
-    title: "User Management",
-    content: "Control access and manage user roles effectively...",
-  },
-  surveys: {
-    section: "Modules",
-    title: "Surveys Module",
-    content:
-      "Create and distribute surveys to gather feedback from your school community...",
-  },
+export const useSections = () => {
+  const { t } = useTranslation("documentation");
+  return [
+    {
+      title: t("sections.gettingStarted.title"),
+      items: [
+        {
+          title: t("sections.gettingStarted.items.intro.title"),
+          path: "intro",
+        },
+        {
+          title: t("sections.gettingStarted.items.quickstart.title"),
+          path: "quickstart",
+        },
+        {
+          title: t("sections.gettingStarted.items.installation.title"),
+          path: "installation",
+        },
+      ],
+    },
+    {
+      title: t("sections.components.title"),
+      items: [
+        {
+          title: t("sections.components.items.adminPanel.title"),
+          path: "admin-panel",
+        },
+        {
+          title: t("sections.components.items.mobileApp.title"),
+          path: "mobile-app",
+        },
+        {
+          title: t("sections.components.items.webInterface.title"),
+          path: "web-interface",
+        },
+      ],
+    },
+    {
+      title: t("sections.modules.title"),
+      items: [
+        {
+          title: t("sections.modules.items.newspaper.title"),
+          path: "newspaper",
+        },
+        {
+          title: t("sections.modules.items.events.title"),
+          path: "events",
+        },
+        {
+          title: t("sections.modules.items.notifications.title"),
+          path: "notifications",
+        },
+        {
+          title: t("sections.modules.items.userManagement.title"),
+          path: "user-management",
+        },
+        {
+          title: t("sections.modules.items.surveys.title"),
+          path: "surveys",
+        },
+      ],
+    },
+  ];
+};
+
+export const useDocumentationContent = () => {
+  const { t } = useTranslation("documentation");
+  return {
+    intro: {
+      section: t("sections.gettingStarted.title"),
+      title: t("sections.gettingStarted.items.intro.title"),
+      content: t("sections.gettingStarted.items.intro.content"),
+    },
+    quickstart: {
+      section: t("sections.gettingStarted.title"),
+      title: t("sections.gettingStarted.items.quickstart.title"),
+      content: t("sections.gettingStarted.items.quickstart.content"),
+    },
+    installation: {
+      section: t("sections.gettingStarted.title"),
+      title: t("sections.gettingStarted.items.installation.title"),
+      content: t("sections.gettingStarted.items.installation.content"),
+    },
+    "admin-panel": {
+      section: t("sections.components.title"),
+      title: t("sections.components.items.adminPanel.title"),
+      content: t("sections.components.items.adminPanel.content"),
+    },
+    "mobile-app": {
+      section: t("sections.components.title"),
+      title: t("sections.components.items.mobileApp.title"),
+      content: t("sections.components.items.mobileApp.content"),
+    },
+    "web-interface": {
+      section: t("sections.components.title"),
+      title: t("sections.components.items.webInterface.title"),
+      content: t("sections.components.items.webInterface.content"),
+    },
+    newspaper: {
+      section: t("sections.modules.title"),
+      title: t("sections.modules.items.newspaper.title"),
+      content: t("sections.modules.items.newspaper.content"),
+    },
+    events: {
+      section: t("sections.modules.title"),
+      title: t("sections.modules.items.events.title"),
+      content: t("sections.modules.items.events.content"),
+    },
+    notifications: {
+      section: t("sections.modules.title"),
+      title: t("sections.modules.items.notifications.title"),
+      content: t("sections.modules.items.notifications.content"),
+    },
+    "user-management": {
+      section: t("sections.modules.title"),
+      title: t("sections.modules.items.userManagement.title"),
+      content: t("sections.modules.items.userManagement.content"),
+    },
+    surveys: {
+      section: t("sections.modules.title"),
+      title: t("sections.modules.items.surveys.title"),
+      content: t("sections.modules.items.surveys.content"),
+    },
+  };
 };

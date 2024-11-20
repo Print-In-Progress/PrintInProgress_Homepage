@@ -1,8 +1,10 @@
 import React from "react";
 import LegalPageLayout from "../layouts/LegalPageLayout";
-import { legalNoticeConfig } from "../config/legal/legalNoticeConfig";
+import { useLegalNoticeConfig } from "../config/legal/legalNoticeConfig";
 
 const LegalNotice = () => {
+  const legalNoticeConfig = useLegalNoticeConfig();
+
   return (
     <LegalPageLayout
       title="Legal Notice"

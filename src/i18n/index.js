@@ -10,6 +10,9 @@ const resources = {
     products: await import("./locales/en/products.json").then((m) => m.default),
     pricing: await import("./locales/en/pricing.json").then((m) => m.default),
     contact: await import("./locales/en/contact.json").then((m) => m.default),
+    documentation: await import("./locales/en/documentation.json").then(
+      (m) => m.default,
+    ),
   },
   de: {
     common: await import("./locales/de/common.json").then((m) => m.default),
@@ -17,6 +20,9 @@ const resources = {
     products: await import("./locales/de/products.json").then((m) => m.default),
     pricing: await import("./locales/de/pricing.json").then((m) => m.default),
     contact: await import("./locales/de/contact.json").then((m) => m.default),
+    documentation: await import("./locales/de/documentation.json").then(
+      (m) => m.default,
+    ),
   },
 };
 
@@ -27,6 +33,7 @@ const AVAILABLE_NAMESPACES = [
   "products",
   "pricing",
   "contact",
+  "documentation",
 ];
 
 // Define supported languages

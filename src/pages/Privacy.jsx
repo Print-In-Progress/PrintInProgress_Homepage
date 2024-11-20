@@ -1,8 +1,11 @@
 import React from "react";
 import GlassCard from "../components/GlassCard";
-import { featureGroup1, featureGroup2 } from "../config/privacyConfig";
+import { useFeatureGroup1, useFeatureGroup2 } from "../config/privacyConfig";
 
 const Privacy = () => {
+  const featureGroup1 = useFeatureGroup1();
+  const featureGroup2 = useFeatureGroup2();
+
   return (
     <div className="mb-5 mt-5 flex flex-col gap-10 px-3 py-2">
       {/* Header Section */}

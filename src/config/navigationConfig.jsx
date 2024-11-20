@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-export const headerLinks = () => {
+export const useHeaderLinks = () => {
   const { t } = useTranslation();
-
   return [
     {
       title: t("header.products"),
@@ -54,9 +53,8 @@ export const headerLinks = () => {
   ];
 };
 
-export const footerLinks = () => {
+export const useFooterLinks = () => {
   const { t } = useTranslation();
-
   return [
     {
       title: t("footer.termsOfService"),

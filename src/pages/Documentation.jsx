@@ -1,54 +1,52 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useOutletContext } from "react-router-dom";
-import { documentationContent } from "../config/documentationConfig";
+import { useTranslation } from "react-i18next";
+import { useDocumentationContent } from "../config/documentationConfig";
 
 const Documentation = () => {
+  const { t } = useTranslation("documentation");
   const { section } = useParams();
   const { isSidebarOpen, setIsSidebarOpen } = useOutletContext();
-  const [content, setContent] = useState({
-    section: "Getting Started",
-    title: "Introduction",
-    content: "Welcome to the edConnect documentation...",
-  });
+  const docContent = useDocumentationContent();
 
-  // Update content when route changes
+  const defaultContent = {
+    section: t("sections.gettingStarted.title"),
+    title: t("sections.gettingStarted.items.intro.title"),
+    content: t("sections.gettingStarted.items.intro.content"),
+  };
+
+  const [currentContent, setCurrentContent] = useState(defaultContent);
+
   useEffect(() => {
-    if (section && documentationContent[section]) {
-      setContent(documentationContent[section]);
-    } else {
-      // Default content for /documentation route
-      setContent({
-        section: "Getting Started",
-        title: "Introduction",
-        content:
-          "Welcome to the edConnect documentation. Select a topic from the sidebar to learn more about our platform and its features.",
-      });
+    const newContent =
+      section && docContent[section] ? docContent[section] : defaultContent;
+    if (JSON.stringify(currentContent) !== JSON.stringify(newContent)) {
+      setCurrentContent(newContent);
     }
-  }, [section]);
+  }, [section, docContent, t]);
 
   return (
     <>
       <nav className="mb-6 flex items-center justify-between md:justify-start">
         <div className="flex items-center text-gray-body">
-          <span>{content.section}</span>
-          <span className="mx-2">/</span>
-          <span>{content.title}</span>
+          <span>{currentContent.section}</span>
+          <span className="mx-2">{t("ui.breadcrumbDivider")}</span>
+          <span>{currentContent.title}</span>
         </div>
-
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           className="rounded-lg bg-primary px-4 py-2 text-gray-display md:hidden"
         >
-          {isSidebarOpen ? "Hide Menu" : "Show Menu"}
+          {isSidebarOpen ? t("ui.hideMenu") : t("ui.showMenu")}
         </button>
       </nav>
 
       <h1 className="mb-6 text-display-md text-gray-display">
-        {content.title}
+        {currentContent.title}
       </h1>
 
       <div className="prose prose-invert max-w-none">
-        <p className="text-body text-gray-body">{content.content}</p>
+        <p className="text-body text-gray-body">{currentContent.content}</p>
       </div>
     </>
   );

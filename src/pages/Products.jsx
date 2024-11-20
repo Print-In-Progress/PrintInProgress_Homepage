@@ -2,10 +2,12 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import GlassCard from "../components/GlassCard";
 import ModuleCard from "../components/ModuleCard";
-import { components, moduleCategories } from "../config/productsConfig";
+import { useComponents, useModules } from "../config/productsConfig";
 
 const Products = () => {
   const { t } = useTranslation("products");
+  const components = useComponents();
+  const modules = useModules();
 
   return (
     <div className="scrollbar-hide mb-5 mt-5 flex flex-col gap-10 overflow-y-scroll px-3 py-2">
@@ -20,7 +22,7 @@ const Products = () => {
 
         {/* Components Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {components().map((component, index) => (
+          {components.map((component, index) => (
             <GlassCard
               key={index}
               heading={component.title}
@@ -39,7 +41,7 @@ const Products = () => {
 
         {/* Modules Categories */}
         <div className="flex flex-col gap-12">
-          {moduleCategories().map((category, index) => (
+          {modules.map((category, index) => (
             <div key={category.title + index} className="flex flex-col gap-6">
               <div className="flex flex-col gap-2">
                 <h3 className="text-display-sm text-gray-display">

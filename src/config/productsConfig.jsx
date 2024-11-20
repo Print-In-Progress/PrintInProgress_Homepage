@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-export const components = () => {
+export const useComponents = () => {
   const { t } = useTranslation("products");
-
   return [
     {
       id: "admin-panel",
@@ -25,9 +24,8 @@ export const components = () => {
   ];
 };
 
-export const moduleCategories = () => {
+export const useModules = () => {
   const { t } = useTranslation("products");
-
   return [
     {
       title: t("modulesOverview.categories.corePlatform.title"),

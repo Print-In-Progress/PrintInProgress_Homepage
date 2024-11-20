@@ -1,11 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { footerLinks } from "../config/navigationConfig";
+import { useFooterLinks } from "../config/navigationConfig";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Footer = () => {
   const { t } = useTranslation("common");
+  const footerLinks = useFooterLinks();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col space-y-6 sm:space-y-8">
           {/* Links - Responsive grid that becomes vertical on mobile */}
           <nav className="grid auto-rows-auto grid-cols-1 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-8">
-            {footerLinks().map((item, index) => (
+            {footerLinks.map((item, index) => (
               <Link
                 key={item.title + index}
                 to={item.path}

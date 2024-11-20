@@ -1,7 +1,7 @@
 import React from "react";
 import HamburgerMenuButton from "./HamburgerMenuButton";
 import MobileMenu from "./MobileMenu";
-import { headerLinks } from "../config/navigationConfig";
+import { useHeaderLinks } from "../config/navigationConfig";
 
 const MobileNavbar = ({ active, setActive }) => {
   return (
@@ -10,7 +10,7 @@ const MobileNavbar = ({ active, setActive }) => {
       <MobileMenu
         active={active}
         setActive={setActive}
-        headerLinks={headerLinks()}
+        headerLinks={useHeaderLinks()}
       />
     </div>
   );

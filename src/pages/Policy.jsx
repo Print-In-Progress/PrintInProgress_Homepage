@@ -1,8 +1,10 @@
 import React from "react";
 import LegalPageLayout from "../layouts/LegalPageLayout";
-import { privacyConfig } from "../config/legal/privacyConfig";
+import { usePrivacyConfig } from "../config/legal/privacyConfig";
 
 const Policy = () => {
+  const privacyConfig = usePrivacyConfig();
+
   return (
     <LegalPageLayout
       title="Privacy Policy"

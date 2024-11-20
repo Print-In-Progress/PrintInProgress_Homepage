@@ -1,8 +1,10 @@
 import React from "react";
 import LegalPageLayout from "../layouts/LegalPageLayout";
-import { termsConfig } from "../config/legal/termsConfig";
+import { useTermsConfig } from "../config/legal/termsConfig";
 
 const TermsOfService = () => {
+  const termsConfig = useTermsConfig();
+
   return (
     <LegalPageLayout
       title="Terms of Service"

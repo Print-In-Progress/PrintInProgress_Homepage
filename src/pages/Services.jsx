@@ -1,8 +1,14 @@
 import React from "react";
 import GlassCard from "../components/GlassCard";
-import { mainServices, additionalServices } from "../config/servicesConfif";
+import {
+  useMainServices,
+  useAdditionalServices,
+} from "../config/servicesConfig";
 
 const Services = () => {
+  const mainServices = useMainServices();
+  const additionalServices = useAdditionalServices();
+
   return (
     <div className="mb-5 mt-5 flex flex-col gap-10 px-3 py-2">
       {/* Header Section */}
