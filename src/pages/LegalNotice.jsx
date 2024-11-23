@@ -6,21 +6,17 @@ const LegalNotice = () => {
   const legalNoticeConfig = useLegalNoticeConfig();
 
   return (
-    <LegalPageLayout
-      title="Legal Notice"
-      lastUpdated={legalNoticeConfig.lastUpdated}
-    >
+    <LegalPageLayout title="Legal Notice">
       {legalNoticeConfig.sections.map((section) => (
-        <section key={section.id}>
-          <h2 className="mb-4 text-headline text-gray-display">
-            {section.title}
-          </h2>
+        <section key={section.id} className="flex flex-col gap-4">
+          {section.title && (
+            <h2 className="text-headline text-gray-display">{section.title}</h2>
+          )}
+
           {Array.isArray(section.content) ? (
-            <div className="text-body text-gray-body">
+            <div className="flex flex-col gap-2 text-body text-gray-body">
               {section.content.map((line, index) => (
-                <p key={index} className="mb-2">
-                  {line}
-                </p>
+                <p key={index}>{line}</p>
               ))}
             </div>
           ) : (

@@ -6,7 +6,7 @@ const LegalPageLayout = ({ title, lastUpdated, children }) => {
       <div className="mx-auto w-full max-w-4xl">
         <h1 className="mb-6 text-display-md text-gray-display">{title}</h1>
         <p className="mb-8 text-body text-gray-body">
-          Last updated: {lastUpdated}
+          {lastUpdated && <>Last updated: {lastUpdated}</>}
         </p>
         <div className="flex flex-col gap-8">{children}</div>
       </div>
