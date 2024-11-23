@@ -18,8 +18,10 @@
     "react-hook-form": "^7.53.2",
     "react-i18next": "^15.1.0",
     "react-pro-sidebar": "^1.1.0",
+    "react-query": "^3.39.3",
     "react-rotating-text": "^1.4.1",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "react-toastify": "^10.0.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

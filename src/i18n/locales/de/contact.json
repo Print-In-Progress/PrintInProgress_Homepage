@@ -54,5 +54,9 @@
   },
   "buttons": {
     "submit": "Absenden"
+  },
+  "toasts": {
+    "success": "E-Mail erfolgreich abgeschickt",
+    "error": "Fehler beim Senden der E-Mail"
   }
 }

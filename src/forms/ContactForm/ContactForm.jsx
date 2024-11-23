@@ -1,8 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
+import * as apiClient from "../../api-client.js";
+import { toast } from "react-toastify";
 
-const ContactForm = ({ type, submitFunction }) => {
+const ContactForm = ({ type }) => {
   const { t } = useTranslation("contact");
 
   const {
@@ -18,27 +21,27 @@ const ContactForm = ({ type, submitFunction }) => {
       message: "",
       priority: "normal",
       ideaType: "feature",
+      type: type,
+    },
+  });
+
+  const { mutate, isLoading } = useMutation(apiClient.sendEmail, {
+    onSuccess: () => {
+      toast.success(t("toast.success"), {
+        position: "top-right",
+      });
+      reset();
+    },
+    onError: (error) => {
+      toast.error(t("toast.error"), {
+        position: "top-right",
+      });
     },
   });
 
   const onSubmit = handleSubmit((formData) => {
-    submitFunction(formData);
-    reset();
+    mutate(formData);
   });
-
-  const priorityOptions = [
-    { value: "low", label: t("priorities.low") },
-    { value: "normal", label: t("priorities.normal") },
-    { value: "high", label: t("priorities.high") },
-    { value: "urgent", label: t("priorities.urgent") },
-  ];
-
-  const ideaTypeOptions = [
-    { value: "feature", label: t("ideaTypes.feature") },
-    { value: "improvement", label: t("ideaTypes.improvement") },
-    { value: "integration", label: t("ideaTypes.integration") },
-    { value: "other", label: t("ideaTypes.other") },
-  ];
 
   return (
     <form onSubmit={onSubmit} className="flex flex-col gap-6">
@@ -78,39 +81,39 @@ const ContactForm = ({ type, submitFunction }) => {
         )}
       </label>
 
-      {type == "support" && (
+      {type === "support" && (
         <label className="flex flex-col gap-2 text-body text-gray-display">
           {t("labels.priority")}
           <select className="primary-select w-full" {...register("priority")}>
-            {priorityOptions.map((option) => (
+            {[
+              { value: "low", label: t("priorities.low") },
+              { value: "normal", label: t("priorities.normal") },
+              { value: "high", label: t("priorities.high") },
+              { value: "urgent", label: t("priorities.urgent") },
+            ].map((option) => (
               <option key={option.value} value={option.value}>
                 {option.label}
               </option>
             ))}
           </select>
-          {errors.priority && (
-            <span className="input-error-message">
-              {errors.priority.message}
-            </span>
-          )}
         </label>
       )}
 
-      {type == "ideas" && (
+      {type === "ideas" && (
         <label className="flex flex-col gap-2 text-body text-gray-display">
           {t("labels.ideaType")}
           <select className="primary-select w-full" {...register("ideaType")}>
-            {ideaTypeOptions.map((option) => (
+            {[
+              { value: "feature", label: t("ideaTypes.feature") },
+              { value: "improvement", label: t("ideaTypes.improvement") },
+              { value: "integration", label: t("ideaTypes.integration") },
+              { value: "other", label: t("ideaTypes.other") },
+            ].map((option) => (
               <option key={option.value} value={option.value}>
                 {option.label}
               </option>
             ))}
           </select>
-          {errors.ideaType && (
-            <span className="input-error-message">
-              {errors.ideaType.message}
-            </span>
-          )}
         </label>
       )}
 
@@ -135,7 +138,6 @@ const ContactForm = ({ type, submitFunction }) => {
       <label className="flex flex-col gap-2 text-body text-gray-display">
         {t("labels.message")}
         <textarea
-          type="textarea"
           className="primary-textarea min-h-52 w-full"
           {...register("message", {
             required: t("validation.required.message"),
@@ -152,6 +154,7 @@ const ContactForm = ({ type, submitFunction }) => {
 
       <button
         type="submit"
+        disabled={isLoading}
         className="primary-button mt-4 px-8 py-3 text-body text-gray-display"
       >
         {t("buttons.submit")}

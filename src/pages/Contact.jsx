@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import NavigationSection from "../forms/ContactForm/NavigationSection";
 import HeaderSection from "../forms/ContactForm/HeaderSection";
@@ -7,11 +7,6 @@ import ContactForm from "../forms/ContactForm/ContactForm";
 const Contact = () => {
   const { type = "general" } = useParams();
   const navigate = useNavigate();
-
-  const handleSubmit = (data) => {
-    // Handle form submission logic here
-    console.log("Form submitted:", { ...data, type });
-  };
 
   // Validate and redirect if invalid type
   useEffect(() => {
@@ -26,7 +21,7 @@ const Contact = () => {
       <div className="mx-auto w-full max-w-3xl px-4">
         <NavigationSection currentType={type} />
         <HeaderSection type={type} />
-        <ContactForm type={type} submitFunction={handleSubmit} />
+        <ContactForm type={type} />
       </div>
     </div>
   );

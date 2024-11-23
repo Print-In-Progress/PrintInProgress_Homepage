@@ -54,5 +54,9 @@
   },
   "buttons": {
     "submit": "Submit"
+  },
+  "toast": {
+    "success": "Email sent successfully",
+    "error": "Error while sending the email"
   }
 }

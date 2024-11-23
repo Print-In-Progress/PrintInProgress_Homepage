@@ -1,6 +1,6 @@
 const SEND_EMAIL_API_URL = import.meta.env.VITE_SEND_EMAIL_API_URL || "";
 
-export const sendEmail = async () => {
+export const sendEmail = async (formData) => {
   const response = await fetch(SEND_EMAIL_API_URL, {
     method: "POST",
     headers: {
