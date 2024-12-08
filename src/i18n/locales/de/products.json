@@ -1,7 +1,7 @@
 {
   "componentsOverview": {
     "title": "Komponenten Übersicht",
-    "description": "Das edConnect System besteht aus 3 Hauptkomponenten: NewsApp Web, edConnect Mobile und edConnect Admin Panel. Sie können Ihre eigenen Farben und Design wählen. Der Basisplan enthält 4 Module Ihrer Wahl sowie das Benutzerverwaltungs- und Push-Benachrichtigungsmodul. Wir bieten eine Vielzahl spezialisierter Pakete für Bildungseinrichtungen an.",
+    "description": "Das edConnect System besteht aus 3 Hauptkomponenten: edConnect Web, edConnect Mobile und edConnect Admin Panel. Sie können Ihre eigenen Farben und Design wählen. Der Basisplan enthält 4 Module Ihrer Wahl sowie das Benutzerverwaltungs- und Push-Benachrichtigungsmodul. Wir bieten eine Vielzahl spezialisierter Pakete für Bildungseinrichtungen an.",
     "components": {
       "adminPanel": {
         "title": "edConnect Admin Panel",
@@ -203,7 +203,7 @@
         },
         "peerReview": {
           "key": "Peer-Review",
-          "details": "Weisen Sie Peer-Review-Aufgaben zu, bei denen Schüler die Arbeiten anderer Schüler nach vorgegebenen Kriterien bewerten können."
+          "details": "Zuweisen von Peer-Review-Aufgaben, bei denen Schüler die Arbeiten anderer Schüler nach vorgegebenen Kriterien bewerten können."
         }
       }
     },
@@ -237,7 +237,7 @@
         },
         "eventCategorization": {
           "key": "Veranstaltungskategorisierung",
-          "details": "Organisiere Veranstaltungen nach Kategorien wie Schulaktivitäten, Clubs oder Eltern-Lehrer-Treffen."
+          "details": "Organisiere Veranstaltungen nach Kategorien wie Schulaktivitäten, AGs oder Eltern-Lehrer-Treffen."
         }
       }
     },
@@ -245,16 +245,16 @@
       "title": "Verwaltung von Außerschulischen Aktivitäten",
       "features": {
         "clubForums": {
-          "key": "Clubspeziﬁsche Foren",
-          "details": "Jeder Club oder jede außerschulische Gruppe kann eigene Diskussionsforen haben, in denen Schüler und Berater Updates, Ideen und Pläne teilen können."
+          "key": "AG-Speziﬁsche Foren",
+          "details": "Jede AG oder jede außerschulische Gruppe kann eigene Diskussionsforen haben, in denen Schüler und Berater Updates, Ideen und Pläne teilen können."
         },
         "documentCreation": {
           "key": "Dokumentenerstellung für Projekte",
-          "details": "Clubs können in Echtzeit gemeinsam an Dokumenten arbeiten, was sich gut für die Planung von Veranstaltungen, das Erstellen von Vorschlägen oder das Schreiben von Club-Newsletern eignet."
+          "details": "AGs können in Echtzeit gemeinsam an Dokumenten arbeiten, was sich gut für die Planung von Veranstaltungen, das Erstellen von Vorschlägen oder das Schreiben von AG-Newsletern eignet."
         },
         "activityRegistration": {
           "key": "Aktivitätsanmeldung",
-          "details": "Schüler können sich direkt über die Plattform für Clubs, Sporteams und andere außerschulische Aktivitäten anmelden."
+          "details": "Schüler können sich direkt über die Plattform für AGs, Sporteams und andere außerschulische Aktivitäten anmelden."
         },
         "attendanceTracking": {
           "key": "Anwesenheitsverfolgung für Aktivitäten",
