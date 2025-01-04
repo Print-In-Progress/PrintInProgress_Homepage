@@ -12,6 +12,7 @@ const DesktopDropdownItem = ({ options, isOpen, setActiveDropdown }) => {
 
   return (
     <AnimatePresence>
+      {/* Shows the dropdown if active */}
       {isOpen && (
         <motion.div
           onClick={(e) => e.stopPropagation()}

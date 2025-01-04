@@ -11,12 +11,8 @@ const Header = ({
   setDesktopDropdownActive,
 }) => {
   const handlePageClick = () => {
-    if (desktopDropdownActive) {
-      setDesktopDropdownActive(null);
-    }
-    if (mobileMenuActive) {
-      setMobileMenuActive(false);
-    }
+    setDesktopDropdownActive(null);
+    setMobileMenuActive(false);
   };
 
   return (

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const ImageWithFallback = ({ src, alt, className, fallbackSrc }) => {
+  // Gives the option to have a placeholder image as a fallback option
+
   const [imageSrc, setImageSrc] = useState(src);
 
   const handleError = () => {

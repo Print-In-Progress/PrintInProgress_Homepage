@@ -3,8 +3,11 @@ import PlaceholerImage from "../assets/PlaceholderImage.png";
 import ImageWithFallback from "./ImageWithFallback";
 
 const GlassCard = ({ heading, text, imageUrl, descriptions }) => {
+  // GlassCard Component has multiple Options of which not all are required
+
   return (
     <div className="flex h-full w-full flex-col overflow-hidden rounded-[25px] border border-gray-outline bg-gray-outline bg-opacity-10">
+      {/* Renders the image if a link if given - has a fallback option if the link is not valid*/}
       {imageUrl && (
         <div className="h-48 w-full overflow-hidden">
           <ImageWithFallback
@@ -15,6 +18,8 @@ const GlassCard = ({ heading, text, imageUrl, descriptions }) => {
           />
         </div>
       )}
+
+      {/* Renders either the heading and descriptions or the heading and one text */}
       <span className="flex flex-col gap-3 p-4">
         {descriptions ? (
           <>

@@ -30,6 +30,7 @@ const MobileMenu = ({ active, setActive, headerLinks }) => {
           exit={{ opacity: 0, y: -20 }}
           className="absolute left-0 right-0 top-20 z-50 flex flex-col gap-2 border-b border-gray-headline border-opacity-10 bg-navbar-bg bg-opacity-95 p-4 backdrop-blur-button"
         >
+          {/* Map over all the Links from the Config File */}
           {headerLinks.map((item, index) => (
             <div key={item.title + index}>
               <motion.button
@@ -40,6 +41,7 @@ const MobileMenu = ({ active, setActive, headerLinks }) => {
                 className="flex w-full flex-row items-center justify-between rounded-lg py-2 text-left text-body text-gray-display hover:bg-white/10"
               >
                 <span>{item.title}</span>
+                {/* If the Item is a Dropdown it has an arrow next to it */}
                 {item.isDropdown && (
                   <motion.span
                     animate={{
@@ -53,6 +55,7 @@ const MobileMenu = ({ active, setActive, headerLinks }) => {
               </motion.button>
 
               <AnimatePresence>
+                {/* Shows Dropdown if option is clicked */}
                 {item.isDropdown && expandedDropdown === item.title && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
@@ -60,6 +63,7 @@ const MobileMenu = ({ active, setActive, headerLinks }) => {
                     exit={{ opacity: 0, height: 0 }}
                     className="ml-4 flex flex-col overflow-hidden"
                   >
+                    {/* Maps over all the dropdown options */}
                     {item.options.map((option, optionIndex) => (
                       <motion.button
                         key={option.title + optionIndex}

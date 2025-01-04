@@ -17,14 +17,18 @@ const DesktopNavbar = ({ activeDropdown, setActiveDropdown }) => {
     }
   };
 
+  {/* Dropdown Item Click is handeled it its own component */ }
+
   return (
     <section className="text-menu-text hidden flex-row gap-6 sm:flex">
+      {/* Maps over all the Links from the Config File */}
       {headerLinks.map((item, index) => (
         <div
           key={item.title + index}
           className="relative"
           onClick={(e) => e.stopPropagation()}
         >
+          {/* Main Link */}
           <button
             onClick={(e) => handleClick(e, item)}
             className="relative hover:text-gray-700"
@@ -32,6 +36,7 @@ const DesktopNavbar = ({ activeDropdown, setActiveDropdown }) => {
             {item.title}
           </button>
 
+          {/* Shows Dropdown Item if active */}
           {item.isDropdown && (
             <DesktopDropdownItem
               options={item.options}

@@ -15,6 +15,7 @@ const Footer = () => {
         <div className="flex flex-col space-y-6 sm:space-y-8">
           {/* Links - Responsive grid that becomes vertical on mobile */}
           <nav className="grid auto-rows-auto grid-cols-1 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-8">
+            {/* Maps over all the Links from the Config File */}
             {footerLinks.map((item, index) => (
               <Link
                 key={item.title + index}

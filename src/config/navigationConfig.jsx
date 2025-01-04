@@ -2,11 +2,19 @@ import { useTranslation } from "react-i18next";
 
 export const useHeaderLinks = () => {
   const { t } = useTranslation();
+
+  // No translation for edConnect and medConnect as its the product name
+
   return [
     {
       title: t("header.products"),
-      isDropdown: false,
-      path: "/products",
+      isDropdown: true,
+      options: [
+        {
+          title: "edConnect",
+          path: "/products/ed-connect",
+        },
+      ],
     },
     {
       title: t("header.pricing"),

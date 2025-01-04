@@ -9,6 +9,7 @@ const HamburgerMenuButton = ({ active, setActive }) => {
         ease: "easeInOut",
       }}
     >
+      {/* Spans act as the Button that transform when clicked */}
       <motion.button
         onClick={() => setActive(!active)}
         animate={active ? "open" : "closed"}

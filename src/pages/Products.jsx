@@ -28,7 +28,7 @@ const ModuleCategory = ({ category, activeDropdown, onDropdownToggle }) => (
         <ModuleCard
           key={module.id}
           title={module.title}
-          descriptions={module.description}
+          content={module.description}
           imageUrl={module.imageUrl}
           status={module.status}
           isExpanded={activeDropdown === module.id}
