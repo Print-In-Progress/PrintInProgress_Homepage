@@ -55,8 +55,9 @@
   "buttons": {
     "submit": "Submit"
   },
-  "toast": {
+  "toasts": {
     "success": "Email sent successfully",
-    "error": "Error while sending the email"
+    "error": "Error while sending the email",
+    "spam": "Invalid submission detected - Please try again"
   }
 }

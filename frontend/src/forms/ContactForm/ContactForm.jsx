@@ -22,34 +22,74 @@ const ContactForm = ({ type }) => {
       priority: "normal",
       ideaType: "feature",
       type: type,
+      _gotcha: "", // honeypot field
     },
   });
 
   const { mutate, isLoading } = useMutation(apiClient.sendEmail, {
     onSuccess: () => {
-      toast.success(t("toast.success"), {
+      toast.success(t("toasts.success"), {
         position: "top-right",
       });
       reset();
     },
     onError: (error) => {
-      toast.error(t("toast.error"), {
+      toast.error(t("toasts.error"), {
         position: "top-right",
       });
     },
   });
 
   const onSubmit = handleSubmit((formData) => {
-    mutate(formData);
+    // Check if honeypot field is filled
+    if (formData._gotcha) {
+      toast.error(t("toasts.spam"), {
+        position: "top-right",
+      });
+      reset(); // Reset the form
+      return;
+    }
+
+    // Remove honeypot field before sending
+    const { _gotcha, ...dataToSend } = formData;
+    mutate(dataToSend);
   });
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-6">
+    <form onSubmit={onSubmit} className="flex flex-col gap-6" autoComplete="off">
+      {/* Honeypot field - with better protection against accidental fills */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          height: '1px',
+          width: '1px',
+          overflow: 'hidden',
+          clip: 'rect(1px, 1px, 1px, 1px)',
+          whiteSpace: 'nowrap',
+          border: 0,
+          padding: 0,
+          margin: -1
+        }}
+      >
+        <label>
+          <span style={{ display: 'none' }}>Leave this field empty</span>
+          <input
+            {...register("_gotcha")}
+            tabIndex="-1"
+            autoComplete="new-password"
+            spellCheck="false"
+            style={{ display: 'none' }}
+          />
+        </label>
+      </div>
+
       <label className="flex flex-col gap-2 text-body text-gray-display">
         {t("labels.name")}
         <input
           type="text"
           className="primary-input"
+          autoComplete="name"
           {...register("name", {
             required: t("validation.required.name"),
             minLength: {
@@ -68,6 +108,7 @@ const ContactForm = ({ type }) => {
         <input
           type="email"
           className="primary-input"
+          autoComplete="email"
           {...register("email", {
             required: t("validation.required.email"),
             pattern: {

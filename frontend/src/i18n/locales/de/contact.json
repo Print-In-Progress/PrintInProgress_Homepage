@@ -57,6 +57,7 @@
   },
   "toasts": {
     "success": "E-Mail erfolgreich abgeschickt",
-    "error": "Fehler beim Senden der E-Mail"
+    "error": "Fehler beim Senden der E-Mail",
+    "spam": "Ungültige Eingabe erkannt - Bitte versuchen Sie es erneut"
   }
 }

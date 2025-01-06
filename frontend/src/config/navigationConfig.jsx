@@ -18,8 +18,13 @@ export const useHeaderLinks = () => {
     },
     {
       title: t("header.pricing"),
-      isDropdown: false,
-      path: "/pricing",
+      isDropdown: true,
+      options: [
+        {
+          title: "edConnect",
+          path: "/pricing/ed-connect",
+        },
+      ],
     },
     {
       title: t("header.whyEdConnect"),
