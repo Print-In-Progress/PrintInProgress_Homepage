@@ -204,6 +204,10 @@
         "peerReview": {
           "key": "Peer Review",
           "details": "Assign peer review tasks where students can evaluate each other's work according to preset criteria."
+        },
+        "pollsAndSurveys": {
+          "key": "Polls and Surveys",
+          "details": "Allow students and teachers to create quick polls or surveys within groups."
         }
       }
     },

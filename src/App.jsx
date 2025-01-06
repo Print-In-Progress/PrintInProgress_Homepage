@@ -13,10 +13,12 @@ import Policy from "./pages/Policy";
 import LegalNotice from "./pages/LegalNotice";
 import DocumentationLayout from "./layouts/DocumentationLayout";
 import Documentation from "./pages/Documentation";
+import ScrollToTop from "./contexts/ScrollToTop";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

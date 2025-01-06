@@ -204,6 +204,10 @@
         "peerReview": {
           "key": "Peer-Review",
           "details": "Zuweisen von Peer-Review-Aufgaben, bei denen Schüler die Arbeiten anderer Schüler nach vorgegebenen Kriterien bewerten können."
+        },
+        "pollsAndSurveys": {
+          "key": "Abstimmungen und Umfragen",
+          "details": "Erlauben Sie es Schülern und Lehrern, schnelle Umfragen oder Absimmungen in Gruppen zu erstellen."
         }
       }
     },

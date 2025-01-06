@@ -289,6 +289,12 @@ export const useModules = () => {
                 "modules.collaborativeLearning.features.peerReview.details",
               ),
             },
+            {
+              key: t("modules.collaborativeLearning.features.pollsAndSurveys.key"),
+              details: t(
+                "modules.collaborativeLearning.features.pollsAndSurveys.details",
+              ),
+            },
           ],
         },
         {

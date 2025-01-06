@@ -11,11 +11,10 @@ const Footer = () => {
 
   return (
     <footer className="relative border-t border-gray-300 border-opacity-10 bg-navbar-bg bg-opacity-20 backdrop-blur-button">
-      <div className="mx-auto w-full max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
-        <div className="flex flex-col space-y-6 sm:space-y-8">
+      <div className="mx-auto w-full max-w-7xl px-4 pb-4 pt-4 sm:px-6 sm:pb-6 sm:pt-6 lg:px-8">
+        <div className="flex flex-col space-y-6">
           {/* Links - Responsive grid that becomes vertical on mobile */}
           <nav className="grid auto-rows-auto grid-cols-1 gap-4 sm:flex sm:flex-wrap sm:justify-center sm:gap-8">
-            {/* Maps over all the Links from the Config File */}
             {footerLinks.map((item, index) => (
               <Link
                 key={item.title + index}
@@ -27,18 +26,18 @@ const Footer = () => {
             ))}
           </nav>
 
-          {/* Divider - Adjusts margin based on screen size */}
+          {/* Divider */}
           <div className="w-full border-t border-gray-300 border-opacity-10" />
 
-          {/* Bottom section - Stacks on mobile, side by side on larger screens */}
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:gap-6 lg:gap-8">
-            {/* Copyright - Full width on mobile, auto width on larger screens */}
-            <p className="w-full text-center text-caption text-gray-body sm:w-auto sm:text-left">
+          {/* Bottom section */}
+          <div className="flex flex-col-reverse items-center gap-4 sm:flex-row sm:justify-between sm:gap-6 lg:gap-8">
+            {/* Copyright */}
+            <p className="mt-4 w-full text-center text-caption text-gray-body sm:mt-0 sm:w-auto sm:text-left">
               © {currentYear} Print In Progress.{" "}
               {t("footer.allRightsReserved")}.
             </p>
 
-            {/* Language Selector - Full width on mobile, auto width on larger screens */}
+            {/* Language Selector */}
             <LanguageSwitcher />
           </div>
         </div>
