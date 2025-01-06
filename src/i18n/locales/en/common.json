@@ -32,5 +32,10 @@
     "done": "Done",
     "in_progress": "In Progress",
     "planned": "Planned"
+  },
+  "notFound": {
+    "redirecting": "Redirecting in {{count}}...",
+    "description": "Taking you to the home page",
+    "skip": "Skip"
   }
 }

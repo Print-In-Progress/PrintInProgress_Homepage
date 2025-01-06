@@ -22,18 +22,23 @@ const TermsOfService = () => {
           ))}
         </section>
       }
+
+      {/* Maps over all parts from the config */}
       {termsConfig.mainPart.map((part, index) => (
         <section key={part.id} className="flex flex-col gap-3">
           <h2 className="text-display-sm text-gray-headline">
             {index + 1}. {part.title}
           </h2>
 
+          {/* Maps over all sections from the Main Parts */}
           {part.sections.map((section) => (
             <span key={section.id} className="flex flex-col gap-2">
               <h3 className="text-headline text-gray-headline"></h3>
 
+              {/* Maps over the content from the section */}
               {section.content.map((cont, index) => (
                 <span key={section.id + index}>
+                  {/* Renders Content as text or bullet point based on the config */}
                   {cont.type == "normal" && (
                     <p className="text-body text-gray-body">{cont.text}</p>
                   )}
@@ -46,6 +51,7 @@ const TermsOfService = () => {
                     </ul>
                   )}
 
+                  {/* Contact info in the end of the config file */}
                   {cont.type == "contact" && (
                     <span className="flex list-disc flex-col text-body font-bold text-gray-display">
                       {cont.info.map((point, index) => (

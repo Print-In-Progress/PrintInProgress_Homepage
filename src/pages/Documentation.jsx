@@ -9,6 +9,7 @@ const Documentation = () => {
   const { isSidebarOpen, setIsSidebarOpen } = useOutletContext();
   const docContent = useDocumentationContent();
 
+  // Default if no documentatio page is selected
   const defaultContent = {
     section: t("sections.gettingStarted.title"),
     title: t("sections.gettingStarted.items.intro.title"),
@@ -33,6 +34,8 @@ const Documentation = () => {
           <span className="mx-2">{t("ui.breadcrumbDivider")}</span>
           <span>{currentContent.title}</span>
         </div>
+
+        {/* Mobile Button to open/close the Navbar */}
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           className="rounded-lg bg-primary px-4 py-2 text-gray-display md:hidden"

@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-  const [activeLanguage, setActiveLanguage] = useState(i18n.language)
+  const [activeLanguage, setActiveLanguage] = useState(i18n.language);
 
   const changeLanguage = (e) => {
     const language = e.target.value;
     i18n.changeLanguage(language);
-    setActiveLanguage(language)
+    setActiveLanguage(language);
   };
 
   return (

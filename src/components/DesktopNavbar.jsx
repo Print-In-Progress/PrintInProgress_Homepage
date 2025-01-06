@@ -17,7 +17,9 @@ const DesktopNavbar = ({ activeDropdown, setActiveDropdown }) => {
     }
   };
 
-  {/* Dropdown Item Click is handeled it its own component */ }
+  {
+    /* Dropdown Item Click is handeled it its own component */
+  }
 
   return (
     <section className="text-menu-text hidden flex-row gap-6 sm:flex">

@@ -4,6 +4,7 @@ import GlassCard from "../components/GlassCard";
 import ModuleCard from "../components/ModuleCard";
 import { useComponents, useModules } from "../config/productsConfig";
 
+// Component thats only needed in this file - no component file needed
 const ComponentsGrid = ({ components }) => (
   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
     {components.map((component) => (
@@ -17,6 +18,7 @@ const ComponentsGrid = ({ components }) => (
   </div>
 );
 
+// Component thats only needed in this file - no component file needed
 const ModuleCategory = ({ category, activeDropdown, onDropdownToggle }) => (
   <div className="flex flex-col gap-6">
     <div className="flex flex-col gap-2">
@@ -58,11 +60,11 @@ const Products = () => {
   };
 
   // Sort modules within each category
-  const modules = unsortedModules.map(category => ({
+  const modules = unsortedModules.map((category) => ({
     ...category,
-    modules: [...category.modules].sort((a, b) =>
-      getStatusPriority(a.status) - getStatusPriority(b.status)
-    )
+    modules: [...category.modules].sort(
+      (a, b) => getStatusPriority(a.status) - getStatusPriority(b.status),
+    ),
   }));
 
   const handleDropdownToggle = (moduleId) => {
@@ -81,6 +83,7 @@ const Products = () => {
         </p>
         <ComponentsGrid components={components} />
       </section>
+
       {/* Modules Section */}
       <section className="mx-auto w-full max-w-7xl px-5">
         <h2 className="mb-6 text-display-md text-gray-display">

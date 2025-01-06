@@ -1,5 +1,5 @@
 import React from "react";
-import PlaceholerImage from "../assets/PlaceholderImage.png";
+import PlaceholerImage from "../assets/PlaceholderImage.webp";
 import ImageWithFallback from "./ImageWithFallback";
 
 const GlassCard = ({ heading, text, imageUrl, descriptions }) => {

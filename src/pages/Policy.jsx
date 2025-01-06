@@ -10,12 +10,14 @@ const Policy = () => {
       title="Privacy Policy"
       lastUpdated={privacyConfig.lastUpdated}
     >
+      {/* Maps over all items from the config file */}
       {privacyConfig.sections.map((section) => (
         <section key={section.id}>
           <h2 className="mb-4 text-headline text-gray-display">
             {section.title}
           </h2>
 
+          {/* Maps over subsections from the config if needed */}
           {section.subsections ? (
             section.subsections.map((subsection, index) => (
               <div key={index} className="mb-4">

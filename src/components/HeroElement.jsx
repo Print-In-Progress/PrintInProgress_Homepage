@@ -1,6 +1,6 @@
 import React from "react";
 import ReactRotatingText from "react-rotating-text";
-import HeroImage from "../assets/HeroImage.png";
+import HeroImage from "../assets/HeroImage.webp";
 
 const HeroElement = () => {
   return (

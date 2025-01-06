@@ -56,7 +56,7 @@ export const useHeaderLinks = () => {
     {
       title: t("header.documentation"),
       isDropdown: false,
-      path: "/documentation",
+      path: "/documentation/intro",
     },
   ];
 };

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { useSections } from "../config/documentationConfig";
 

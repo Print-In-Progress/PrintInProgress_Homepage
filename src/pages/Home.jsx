@@ -32,7 +32,7 @@ const Home = () => {
 
         <span className="relative flex w-full flex-row justify-center">
           <button
-            onClick={() => navigate("/products")}
+            onClick={() => navigate("/products/ed-connect")}
             className="elevated-button px-7 py-5 text-headline font-bold text-gray-small sm:text-display-sm"
           >
             {t("features")}
