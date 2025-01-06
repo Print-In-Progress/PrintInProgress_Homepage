@@ -1,0 +1,41 @@
+{
+  "header": {
+    "products": "Products",
+    "pricing": "Pricing",
+    "whyEdConnect": "Why edConnect?",
+    "contactUs": "Contact Us",
+    "documentation": "Documentation",
+    "getInTouch": "Get in touch",
+    "supportPortal": "Support Portal",
+    "ideaPortal": "Idea Portal",
+    "services": "Additional Services & Consultancy",
+    "privacy": "Privacy"
+  },
+  "footer": {
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotice": "Legal Notice",
+    "allRightsReserved": "All rights reserved",
+    "language": {
+      "english": "English",
+      "german": "German"
+    }
+  },
+  "buttons": {
+    "submit": "Submit",
+    "learn_more": "Learn More",
+    "contact_sales": "Contact Sales",
+    "show_details": "Show Details",
+    "hide_details": "Hide Details"
+  },
+  "status": {
+    "done": "Done",
+    "in_progress": "In Progress",
+    "planned": "Planned"
+  },
+  "notFound": {
+    "redirecting": "Redirecting in {{count}}...",
+    "description": "Taking you to the home page",
+    "skip": "Skip"
+  }
+}

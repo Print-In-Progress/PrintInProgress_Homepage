@@ -1,0 +1,62 @@
+{
+  "forms": {
+    "general": {
+      "title": "Get in Touch",
+      "description": "Have a question about edConnect? We'd love to hear from you."
+    },
+    "support": {
+      "title": "Support Portal",
+      "description": "Need technical assistance? Our support team is here to help."
+    },
+    "ideas": {
+      "title": "Share Your Ideas",
+      "description": "Share your ideas to help us improve edConnect."
+    }
+  },
+  "navigation": {
+    "getInTouch": "Get in Touch",
+    "supportPortal": "Support Portal",
+    "ideaPortal": "Idea Portal"
+  },
+  "labels": {
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "priority": "Priority",
+    "ideaType": "Idea Type"
+  },
+  "priorities": {
+    "low": "Low",
+    "normal": "Normal",
+    "high": "High",
+    "urgent": "Urgent"
+  },
+  "ideaTypes": {
+    "feature": "New Feature",
+    "improvement": "Improvement",
+    "integration": "Integration",
+    "other": "Other"
+  },
+  "validation": {
+    "required": {
+      "name": "Name is required",
+      "email": "Email is required",
+      "subject": "Subject is required",
+      "message": "Message is required"
+    },
+    "minLength": {
+      "name": "Name must be at least 2 characters",
+      "subject": "Subject must be at least 3 characters",
+      "message": "Message must be at least 10 characters"
+    },
+    "email": "Invalid email address"
+  },
+  "buttons": {
+    "submit": "Submit"
+  },
+  "toast": {
+    "success": "Email sent successfully",
+    "error": "Error while sending the email"
+  }
+}
