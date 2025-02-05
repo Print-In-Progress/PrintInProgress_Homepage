@@ -9,13 +9,15 @@ const GlassCard = ({ heading, text, imageUrl, descriptions }) => {
     <div className="flex h-full w-full flex-col overflow-hidden rounded-[25px] border border-gray-outline bg-gray-outline bg-opacity-10">
       {/* Renders the image if a link if given - has a fallback option if the link is not valid*/}
       {imageUrl && (
-        <div className="h-48 w-full overflow-hidden">
-          <ImageWithFallback
-            src={imageUrl}
-            className="h-full w-full object-cover"
-            fallbackSrc={PlaceholerImage}
-            alt={heading}
-          />
+        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+          <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
+            <ImageWithFallback
+              src={imageUrl}
+              className="h-full w-full object-cover"
+              fallbackSrc={PlaceholerImage}
+              alt={heading}
+            />
+          </div>
         </div>
       )}
 
