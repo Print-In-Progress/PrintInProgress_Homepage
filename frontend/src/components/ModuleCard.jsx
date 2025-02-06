@@ -27,13 +27,12 @@ const ModulesCard = ({ title, content, imageUrl, status }) => {
       </div>
 
       {/* Image Section */}
-      <div className="h-48 w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden pt-[56.25%]">
         <ImageWithFallback
           src={imageUrl}
           fallbackSrc={FallbackImage}
-          className="h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <ImageWithFallback />
       </div>
 
       {/* Content Section */}

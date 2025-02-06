@@ -1,12 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import HeroElement from "../components/HeroElement";
-import { useNavigate } from "react-router-dom";
 import GlassCard from "../components/GlassCard.jsx";
 
 const Home = () => {
   const { t } = useTranslation("home");
-  const navigate = useNavigate();
 
   const benefits = [
     {
@@ -28,15 +26,6 @@ const Home = () => {
       <div className="mb-5 flex flex-col gap-10 px-3 py-2">
         <span className="relative">
           <HeroElement />
-        </span>
-
-        <span className="relative flex w-full flex-row justify-center">
-          <button
-            onClick={() => navigate("/products/ed-connect")}
-            className="elevated-button px-7 py-5 text-headline font-bold text-gray-small sm:text-display-sm"
-          >
-            {t("features")}
-          </button>
         </span>
 
         <p className="relative mx-auto w-full max-w-7xl px-5 text-body text-gray-headline sm:text-headline">
