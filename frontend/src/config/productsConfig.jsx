@@ -12,6 +12,10 @@ import PushNotificationsImage from "../assets/PushNotificationsImage.webp";
 import SortingImage from "../assets/SortingImage.webp";
 import SurveysImage from "../assets/SurveysImage.webp";
 import UserManagementImage from "../assets/UserManagementImage.webp";
+import ParentConnectImage from "../assets/ParentConnectImage.webp";
+import EdConnectAdminPanelImage from "../assets/EdConnectAdminPanelImage.webp";
+import EdConnectMobileImage from "../assets/EdConnectMobileImage.webp";
+import EdConnectWebImage from "../assets/EdConnectWebImage.webp";
 
 export const useComponents = () => {
   const { t } = useTranslation("products");
@@ -20,19 +24,19 @@ export const useComponents = () => {
       id: "admin-panel",
       title: t("componentsOverview.components.adminPanel.title"),
       description: t("componentsOverview.components.adminPanel.description"),
-      imageUrl: "placegolderImage",
+      imageUrl: EdConnectAdminPanelImage,
     },
     {
       id: "edconnect-mobile",
       title: t("componentsOverview.components.mobile.title"),
       description: t("componentsOverview.components.mobile.description"),
-      imageUrl: "placegolderImage",
+      imageUrl: EdConnectMobileImage,
     },
     {
       id: "edconnect-web",
       title: t("componentsOverview.components.web.title"),
       description: t("componentsOverview.components.web.description"),
-      imageUrl: "placegolderImage",
+      imageUrl: EdConnectWebImage,
     },
   ];
 };
@@ -186,7 +190,7 @@ export const useModules = () => {
           id: "parent-teacher",
           title: t("modules.parentTeacher.title"),
           status: t("status.planned"),
-          imageUrl: "placegolderImage",
+          imageUrl: ParentConnectImage,
           description: [
             {
               key: t("modules.parentTeacher.features.directMessaging.key"),

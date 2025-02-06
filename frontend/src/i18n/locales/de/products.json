@@ -137,7 +137,7 @@
       }
     },
     "parentTeacher": {
-      "title": "Eltern-Lehrer-Kollaborationsmodul",
+      "title": "ElternLehrerPortal",
       "features": {
         "directMessaging": {
           "key": "Direktnachrichten",
@@ -179,7 +179,7 @@
       }
     },
     "collaborativeLearning": {
-      "title": "Kollaboratives Lernmodul",
+      "title": "Learn Lab",
       "features": {
         "assignmentDistribution": {
           "key": "Aufgabenverteilung",
@@ -246,7 +246,7 @@
       }
     },
     "extracurricular": {
-      "title": "Verwaltung von Außerschulischen Aktivitäten",
+      "title": "AG/Aktivitäten-Verwaltung",
       "features": {
         "clubForums": {
           "key": "AG-Speziﬁsche Foren",

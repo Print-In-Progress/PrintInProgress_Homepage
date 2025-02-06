@@ -137,7 +137,7 @@
       }
     },
     "parentTeacher": {
-      "title": "Parent-Teacher Collaboration Module",
+      "title": "ParentConnect",
       "features": {
         "directMessaging": {
           "key": "Direct Messaging",
@@ -179,7 +179,7 @@
       }
     },
     "collaborativeLearning": {
-      "title": "Collaborative Learning Module",
+      "title": "Learn Lab",
       "features": {
         "assignmentDistribution": {
           "key": "Individual Assignment Distribution",
