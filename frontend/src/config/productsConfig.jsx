@@ -1,4 +1,17 @@
 import { useTranslation } from "react-i18next";
+import DigitalClassRegisterImage from "../assets/DigitalClassRegisterImage.webp";
+import DigitalLibraryImage from "../assets/DigitalLibraryImage.webp";
+import EdAIImage from "../assets/EdAIImage.webp";
+import EventsImage from "../assets/EventsImage.webp";
+import ExtracurricularManagementImage from "../assets/ExtracurricularManagementImage.webp";
+import LearnLabImage from "../assets/LearnLabImage.webp";
+import MessagingImage from "../assets/MessagingImage.webp";
+import NewspaperImage from "../assets/NewspaperImage.webp";
+import OtherFeaturesImage from "../assets/OtherFeaturesImage.webp";
+import PushNotificationsImage from "../assets/PushNotificationsImage.webp";
+import SortingImage from "../assets/SortingImage.webp";
+import SurveysImage from "../assets/SurveysImage.webp";
+import UserManagementImage from "../assets/UserManagementImage.webp";
 
 export const useComponents = () => {
   const { t } = useTranslation("products");
@@ -35,7 +48,7 @@ export const useModules = () => {
           id: "user-management",
           title: t("modules.userManagement.title"),
           status: t("status.done"),
-          imageUrl: "placegolderImage",
+          imageUrl: UserManagementImage,
           description: [
             {
               key: t(
@@ -67,7 +80,7 @@ export const useModules = () => {
           id: "push-notifications",
           title: t("modules.pushNotifications.title"),
           status: t("status.done"),
-          imageUrl: "placegolderImage",
+          imageUrl: PushNotificationsImage,
           description: [
             {
               key: t(
@@ -91,7 +104,7 @@ export const useModules = () => {
           id: "other-features",
           title: t("modules.otherFeatures.title"),
           status: t("status.done"),
-          imageUrl: "placegolderImage",
+          imageUrl: OtherFeaturesImage,
           description: [
             {
               key: t("modules.otherFeatures.features.customRegistration.key"),
@@ -117,7 +130,7 @@ export const useModules = () => {
           id: "newspaper",
           title: t("modules.newspaper.title"),
           status: t("status.done"),
-          imageUrl: "placegolderImage",
+          imageUrl: NewspaperImage,
           description: [
             {
               key: t("modules.newspaper.features.digitalBlog.key"),
@@ -149,7 +162,7 @@ export const useModules = () => {
           id: "messaging",
           title: t("modules.messaging.title"),
           status: t("status.inProgress"),
-          imageUrl: "placegolderImage",
+          imageUrl: MessagingImage,
           description: [
             {
               key: t("modules.messaging.features.groupChats.key"),
@@ -204,10 +217,10 @@ export const useModules = () => {
       ),
       modules: [
         {
-          id: "digital-library",
+          id: "digitalLibrary",
           title: t("modules.digitalLibrary.title"),
           status: t("status.inProgress"),
-          imageUrl: "placegolderImage",
+          imageUrl: DigitalLibraryImage,
           description: [
             {
               key: t("modules.digitalLibrary.features.documentStorage.key"),
@@ -245,7 +258,7 @@ export const useModules = () => {
           id: "collaborative-learning",
           title: t("modules.collaborativeLearning.title"),
           status: t("status.planned"),
-          imageUrl: "placegolderImage",
+          imageUrl: LearnLabImage,
           description: [
             {
               key: t(
@@ -290,7 +303,9 @@ export const useModules = () => {
               ),
             },
             {
-              key: t("modules.collaborativeLearning.features.pollsAndSurveys.key"),
+              key: t(
+                "modules.collaborativeLearning.features.pollsAndSurveys.key",
+              ),
               details: t(
                 "modules.collaborativeLearning.features.pollsAndSurveys.details",
               ),
@@ -301,7 +316,7 @@ export const useModules = () => {
           id: "educational-ai",
           title: t("modules.educationalAi.title"),
           status: t("status.planned"),
-          imageUrl: "placegolderImage",
+          imageUrl: EdAIImage,
           description: [
             {
               key: t("modules.educationalAi.features.plagiarismDetection.key"),
@@ -333,7 +348,7 @@ export const useModules = () => {
           id: "events",
           title: t("modules.events.title"),
           status: t("status.done"),
-          imageUrl: "placegolderImage",
+          imageUrl: EventsImage,
           description: [
             {
               key: t("modules.events.features.eventCreation.key"),
@@ -353,7 +368,7 @@ export const useModules = () => {
           id: "extracurricular",
           title: t("modules.extracurricular.title"),
           status: t("status.planned"),
-          imageUrl: "placegolderImage",
+          imageUrl: ExtracurricularManagementImage,
           description: [
             {
               key: t("modules.extracurricular.features.clubForums.key"),
@@ -385,7 +400,7 @@ export const useModules = () => {
           id: "sorting",
           title: t("modules.sorting.title"),
           status: t("status.done"),
-          imageUrl: "placegolderImage",
+          imageUrl: SortingImage,
           description: [
             {
               key: t("modules.sorting.features.classAssignment.key"),
@@ -421,7 +436,7 @@ export const useModules = () => {
           id: "surveys",
           title: t("modules.surveys.title"),
           status: t("status.done"),
-          imageUrl: "placegolderImage",
+          imageUrl: SurveysImage,
           description: [
             {
               key: t("modules.surveys.features.surveyBuilder.key"),
@@ -443,7 +458,7 @@ export const useModules = () => {
           id: "digital-class-register",
           title: t("modules.digitalClassRegister.title"),
           status: t("status.planned"),
-          imageUrl: "placegolderImage",
+          imageUrl: DigitalClassRegisterImage,
           description: [
             {
               key: t(
