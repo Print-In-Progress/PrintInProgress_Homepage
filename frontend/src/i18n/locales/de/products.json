@@ -1,7 +1,12 @@
 {
   "componentsOverview": {
     "title": "Komponenten Übersicht",
-    "description": "Das edConnect System besteht aus 3 Hauptkomponenten: edConnect Web, edConnect Mobile und edConnect Admin Panel. Sie können Ihre eigenen Farben und Design wählen. Der Basisplan enthält 4 Module Ihrer Wahl sowie das Benutzerverwaltungs- und Push-Benachrichtigungsmodul. Wir bieten eine Vielzahl spezialisierter Pakete für Bildungseinrichtungen an.",
+    "description": "edConnect umfasst Web, Mobile und das Admin-Panel - alle vollständig anpassbar, um das Branding Ihrer Institution widerzuspiegeln.",
+    "features": {
+      "basicPlan": "Basisplan - 4 Module nach Wahl + Benutzerverwaltung & Push-Benachrichtigungen",
+      "tailoredSolutions": "Individuelle Lösungen - Maßgeschneiderte Systeme auf Basis von edConnect nach Wunsch",
+      "selfHosting": "Self-Hosting verfügbar - Volle Kontrolle über Ihre eigene Infrastruktur"
+    },
     "components": {
       "adminPanel": {
         "title": "edConnect Admin Panel",

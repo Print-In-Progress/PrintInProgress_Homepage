@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import GlassCard from "../components/GlassCard";
 import ModuleCard from "../components/ModuleCard";
 import { useComponents, useModules } from "../config/productsConfig";
+import ComponentsOverviewList from "../components/ComponentsOverviewList";
 
 // Component thats only needed in this file - no component file needed
 const ComponentsGrid = ({ components }) => (
@@ -71,6 +72,8 @@ const Products = () => {
     setActiveDropdown(activeDropdown === moduleId ? null : moduleId);
   };
 
+  const features = [t("componentsOverview.features.basicPlan"), t("componentsOverview.features.tailoredSolutions"), t("componentsOverview.features.selfHosting")];
+
   return (
     <div className="relative mb-16 flex flex-col gap-10 px-3 py-2">
       {/* Components Overview Section */}
@@ -81,6 +84,7 @@ const Products = () => {
         <p className="mb-8 text-body text-gray-headline sm:text-headline">
           {t("componentsOverview.description")}
         </p>
+        <ComponentsOverviewList features={features}></ComponentsOverviewList>
         <ComponentsGrid components={components} />
       </section>
 

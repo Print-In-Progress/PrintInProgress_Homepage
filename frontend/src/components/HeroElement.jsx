@@ -14,10 +14,10 @@ const HeroElement = () => {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-20">
           <div className="flex flex-col justify-center space-y-6 text-center lg:text-left">
             <h1 className="text-4xl font-bold tracking-tight text-gray-display sm:text-5xl lg:text-6xl">
-              <span className="block">Connect</span>
+              <span className="block">Connecting</span>
               <span className="block">your</span>
               <ReactRotatingText
-                items={["School", "Organization", "University"]}
+                items={["School", "Organization", "University", "Hospital"]}
                 pause={2000}
                 typingInterval={100}
                 deletingInterval={100}
@@ -39,7 +39,7 @@ const HeroElement = () => {
             <img
               src={HeroImage}
               alt="Product"
-              className="h-auto w-full max-w-2xl rounded-lg object-contain lg:max-h-[600px]"
+              className="h-auto w-full max-w-2xl rounded-lg object-contain lg:max-h-[600]"
             />
           </div>
         </div>
