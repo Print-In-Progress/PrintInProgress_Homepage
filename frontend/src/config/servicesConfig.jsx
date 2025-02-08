@@ -1,29 +1,45 @@
-export const useMainServices = () => {
+import { useTranslation } from "react-i18next";
+
+export const useAdditionalServices = () => {
+  const { t } = useTranslation("whyedconnect");
+
   return [
     {
-      title: "Service Category 1",
+      title: t("servicesOverview.components.additionalServices.flexibleHosting.title"),
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        t("servicesOverview.components.additionalServices.flexibleHosting.description"),
     },
     {
-      title: "Service Category 2",
+      title: t("servicesOverview.components.additionalServices.onboarding.title"),
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        t("servicesOverview.components.additionalServices.onboarding.description"),
+    },
+    {
+      title: t("servicesOverview.components.additionalServices.strategicConsultancy.title"),
+      description:
+        t("servicesOverview.components.additionalServices.strategicConsultancy.description"),
+    },
+    {
+      title: t("servicesOverview.components.additionalServices.useCaseDemo.title"),
+      description:
+        t("servicesOverview.components.additionalServices.useCaseDemo.description"),
     },
   ];
 };
 
-export const useAdditionalServices = () => {
+export const useAdvancedCustomization = () => {
+  const { t } = useTranslation("whyedconnect");
+
   return [
     {
-      title: "Additional Service 1",
+      title: t("servicesOverview.components.advancedCustomization.customModules.title"),
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        t("servicesOverview.components.advancedCustomization.customModules.description"),
     },
     {
-      title: "Additional Service 2",
+      title: t("servicesOverview.components.advancedCustomization.completeCustomSystems.title"),
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        t("servicesOverview.components.advancedCustomization.completeCustomSystems.description"),
     },
   ];
 };

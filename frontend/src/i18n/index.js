@@ -13,6 +13,7 @@ const resources = {
     documentation: await import("./locales/en/documentation.json").then(
       (m) => m.default,
     ),
+    whyedconnect: await import("./locales/en/whyedconnect.json").then((m) => m.default),
   },
   de: {
     common: await import("./locales/de/common.json").then((m) => m.default),
@@ -23,6 +24,7 @@ const resources = {
     documentation: await import("./locales/de/documentation.json").then(
       (m) => m.default,
     ),
+    whyedconnect: await import("./locales/de/whyedconnect.json").then((m) => m.default),
   },
 };
 
@@ -34,6 +36,7 @@ const AVAILABLE_NAMESPACES = [
   "pricing",
   "contact",
   "documentation",
+  "whyedconnect",
 ];
 
 // Define supported languages

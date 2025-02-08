@@ -1,0 +1,38 @@
+{
+    "servicesOverview": {
+        "title": "Dienstleistungsüberblick",
+        "description": "Wir gehen über Standardlösungen hinaus. Unsere zusätzlichen Services und Beratungen sind darauf ausgerichtet, Ihre Institution zu stärken, indem wir maßgeschneiderte, ganzheitliche digitale Transformationen anbieten – sei es durch kundenspezifische Module oder ein breites Spektrum unterstützender Dienstleistungen.",
+        "components": {
+            "additionalServices": {
+                "title": "Zusätzliche Services (im Basistarif enthalten)",
+                "flexibleHosting": {
+                    "title": "Flexible Hosting-Optionen",
+                    "description": "Sicherheit, Kontrolle und Compliance sind entscheidend. Deshalb bieten wir flexible Hosting-Optionen für edConnect an. Wählen Sie unser gemanagtes Hosting für ein problemloses, cloudbasiertes Erlebnis oder entscheiden Sie sich für On-Premise-Hosting, wenn Sie vollständige Kontrolle über Ihre Daten benötigen. Unser Team sorgt für eine nahtlose Integration, erstklassige Sicherheit und fortlaufende Unterstützung, ganz gleich, wie Sie sich entscheiden."
+                },
+                "onboarding": {
+                    "title": "Onboarding & Schulung",
+                    "description": "Wir verstehen, dass die Umstellung auf ein neues System herausfordernd sein kann. Deshalb bieten wir umfassende Onboarding- und Schulungsleistungen an, um eine reibungslose und erfolgreiche Implementierung zu gewährleisten. Unser Team begleitet Sie durch den Prozess, hilft Ihnen bei der Einrichtung Ihres Kontos und bietet Schulungen an, damit Sie und Ihr Team edConnect optimal nutzen können."
+                },
+                "strategicConsultancy": {
+                    "title": "Strategische Beratung",
+                    "description": "Über die Technologie hinaus bieten wir strategische Beratungsleistungen an, um Ihnen bei der Planung, Umsetzung und kontinuierlichen Verbesserung Ihres digitalen Ökosystems zu helfen. Unsere Berater liefern Einblicke in bewährte Verfahren, unterstützen bei der Prozessoptimierung und sorgen dafür, dass Ihre Institution im digitalen Zeitalter voraus ist. Mit edConnect erwerben Sie nicht nur Software – Sie gewinnen einen Partner, der sich Ihrem langfristigen Erfolg verschrieben hat."
+                },
+                "useCaseDemo": {
+                    "title": "Praxis-Demonstrationen",
+                    "description": "Sehen heißt glauben. Unser Team bietet Ihnen eine individuelle Demo von edConnect, die auf die spezifischen Anforderungen Ihrer Institution zugeschnitten ist. Ob Sie an einem bestimmten Modul interessiert sind oder die volle Leistungsfähigkeit von edConnect erkunden möchten – unsere Experten führen Sie durch praxisnahe Anwendungsbeispiele und zeigen, wie edConnect das digitale Erlebnis Ihrer Institution transformieren kann."
+                }
+            },
+            "advancedCustomization": {
+                "title": "Erweiterte Anpassung (Preis auf Anfrage)",
+                "customModules": {
+                    "title": "Kundenspezifische Module",
+                    "description": "Jede Institution bringt ihre eigenen Herausforderungen und Chancen mit sich. Wir arbeiten eng mit Ihnen zusammen, um kundenspezifische Module zu entwickeln, die sich nahtlos in die edConnect-Plattform integrieren. Von spezialisierten Kommunikationstools bis hin zu einer einzigartigen Login-Oberfläche – wir erstellen Lösungen, die perfekt zu Ihren bestehenden Prozessen und Ihrer zukünftigen Vision passen."
+                },
+                "completeCustomSystems": {
+                    "title": "Komplett angepasste Systeme",
+                    "description": "Manchmal reicht ein einzelnes Modul nicht aus. Wir bieten die Entwicklung kompletter kundenspezifischer Systeme auf Basis des robusten edConnect-Frameworks an. Gemeinsam mit Ihrem Team entwerfen, bauen und implementieren wir eine umfassende Lösung, die alle notwendigen Aspekte abdeckt. Ob Sie einen bestimmten Prozess, wie die Studierendenzulassung, digitalisieren oder einen neuen digitalen Service erstellen möchten – wir finden die passende Lösung."
+                }
+            }
+        }
+    }
+}

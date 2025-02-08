@@ -1,0 +1,38 @@
+{
+    "servicesOverview": {
+        "title": "Services Overview",
+        "description": "We go beyond standard solutions. Our additional services and consultancy are designed to empower your institution by delivering tailored, end-to-end digital transformation—whether through custom modules or a range of supportive services.",
+        "components": {
+            "additionalServices": {
+                "title": "Additional Services (Included in Basic Plan)",
+                "flexibleHosting": {
+                    "title": "Flexible Hosting Options",
+                    "description": "Security, control, and compliance are critical. That's why we offer flexible hosting options for edConnect. Choose our managed hosting for a hassle-free, cloud-based experience, or opt for on-premise hosting if you need complete control over your data. Our team is here to ensure smooth integration, top-notch security, and ongoing support regardless of your choice."
+                },
+                "onboarding": {
+                    "title": "Onboarding & Training",
+                    "description": "We understand that transitioning to a new system can be challenging. That's why we provide comprehensive onboarding and training services to ensure a smooth and successful implementation. Our team will guide you through the process, help you set up your account, and provide training to ensure that you and your team are fully equipped to make the most of edConnect."
+                },
+                "strategicConsultancy": {
+                    "title": "Strategic Consultancy",
+                    "description": "Beyond the technology, we offer strategic consultancy services to help you plan, implement, and continuously improve your digital ecosystem. Our consultants provide insights on best practices, assist with process optimization, and ensure that your institution stays ahead in the digital age. With edConnect, you're not just purchasing software—you're gaining a partner dedicated to your long-term success."
+                },
+                "useCaseDemo": {
+                    "title": "Use Case Demonstrations",
+                    "description": "Seeing is believing. Our team will provide a personalized demo of edConnect tailored to your institution's specific needs. Whether you're interested in a specific module or want to explore the full capabilities of edConnect, our experts will walk you through real-world use cases and demonstrate how edConnect can transform your institution's digital experience."
+                }
+            },
+            "advancedCustomization": {
+                "title": "Advanced Customization (Price on Request)",
+                "customModules": {
+                    "title": "Custom Modules",
+                    "description": "Every institution has its own set of challenges and opportunities. Our will work in close collaboration with you to develop custom modules that integrate seamlessly with the edConnect platform. From specialized communication tools to a unique login interface, we build solutions that fit perfectly into your existing processes and future vision."
+                },
+                "completeCustomSystems": {
+                    "title": "Complete Custom Systems",
+                    "description": "Sometimes, a single module isn't enough. We offer the development of complete custom systems based on the robust edConnect framework. Working hand in hand with your team, we design, build, and implement a comprehensive solution that covers all aspects that you need. Whether you're looking to digitize a specific process like student admissions or create a new digital service."
+                }
+            }
+        }
+    }
+}
