@@ -1,37 +1,91 @@
 {
     "servicesOverview": {
-        "title": "Dienstleistungsüberblick",
-        "description": "Wir gehen über Standardlösungen hinaus. Unsere zusätzlichen Services und Beratungen sind darauf ausgerichtet, Ihre Institution zu stärken, indem wir maßgeschneiderte, ganzheitliche digitale Transformationen anbieten – sei es durch kundenspezifische Module oder ein breites Spektrum unterstützender Dienstleistungen.",
+        "title": "Dienstleistungsübersicht",
+        "description": "Wir gehen über Standardlösungen hinaus. Unsere zusätzlichen Dienstleistungen und Beratungsangebote sind darauf ausgerichtet, Ihre Einrichtung zu stärken, indem wir maßgeschneiderte, digitale Transformationslösungen anbieten, sei es durch individuelle Module oder ein umfassendes Serviceangebot.",
         "components": {
             "additionalServices": {
-                "title": "Zusätzliche Services (im Basistarif enthalten)",
+                "title": "Zusätzlicher Service (im Basistarif enthalten)",
                 "flexibleHosting": {
                     "title": "Flexible Hosting-Optionen",
-                    "description": "Sicherheit, Kontrolle und Compliance sind entscheidend. Deshalb bieten wir flexible Hosting-Optionen für edConnect an. Wählen Sie unser gemanagtes Hosting für ein problemloses, cloudbasiertes Erlebnis oder entscheiden Sie sich für On-Premise-Hosting, wenn Sie vollständige Kontrolle über Ihre Daten benötigen. Unser Team sorgt für eine nahtlose Integration, erstklassige Sicherheit und fortlaufende Unterstützung, ganz gleich, wie Sie sich entscheiden."
+                    "description": "Sicherheit, Kontrolle und Compliance sind entscheidend. Deshalb bieten wir flexible Hosting-Optionen für edConnect an. Wählen Sie unser gemanagtes Hosting für ein problemloses, cloudbasiertes Erlebnis oder entscheiden Sie sich für On-Premise-Hosting, wenn Sie die volle Kontrolle über Ihre Daten benötigen. Unser Team sorgt für eine reibungslose Integration, erstklassige Sicherheit und kontinuierlichen Support, ganz gleich, wofür Sie sich entscheiden."
                 },
                 "onboarding": {
-                    "title": "Onboarding & Schulung",
-                    "description": "Wir verstehen, dass die Umstellung auf ein neues System herausfordernd sein kann. Deshalb bieten wir umfassende Onboarding- und Schulungsleistungen an, um eine reibungslose und erfolgreiche Implementierung zu gewährleisten. Unser Team begleitet Sie durch den Prozess, hilft Ihnen bei der Einrichtung Ihres Kontos und bietet Schulungen an, damit Sie und Ihr Team edConnect optimal nutzen können."
+                    "title": "Onboarding & Schulungen",
+                    "description": "Wir wissen, dass der Umstieg auf ein neues System herausfordernd sein kann. Deshalb bieten wir umfassende Onboarding- und Schulungen an, um eine reibungslose und erfolgreiche Implementierung zu gewährleisten. Unser Team begleitet Sie durch den Prozess, unterstützt Sie bei der Einrichtung Ihres Systems und schult Sie, damit Sie und Ihr Team edConnect optimal nutzen können."
                 },
                 "strategicConsultancy": {
-                    "title": "Strategische Beratung",
-                    "description": "Über die Technologie hinaus bieten wir strategische Beratungsleistungen an, um Ihnen bei der Planung, Umsetzung und kontinuierlichen Verbesserung Ihres digitalen Ökosystems zu helfen. Unsere Berater liefern Einblicke in bewährte Verfahren, unterstützen bei der Prozessoptimierung und sorgen dafür, dass Ihre Institution im digitalen Zeitalter voraus ist. Mit edConnect erwerben Sie nicht nur Software – Sie gewinnen einen Partner, der sich Ihrem langfristigen Erfolg verschrieben hat."
+                    "title": "Beratung",
+                    "description": "Über die Technologie hinaus bieten wir Beratungsdienste an, die Ihnen helfen, Ihr digitales Ökosystem zu planen, umzusetzen und kontinuierlich zu verbessern. Unsere Berater liefern Einblicke in bewährte Verfahren, unterstützen bei der Prozessoptimierung und sorgen dafür, dass Ihre Einrichtung im digitalen Zeitalter stets einen Schritt voraus ist. "
                 },
                 "useCaseDemo": {
-                    "title": "Praxis-Demonstrationen",
-                    "description": "Sehen heißt glauben. Unser Team bietet Ihnen eine individuelle Demo von edConnect, die auf die spezifischen Anforderungen Ihrer Institution zugeschnitten ist. Ob Sie an einem bestimmten Modul interessiert sind oder die volle Leistungsfähigkeit von edConnect erkunden möchten – unsere Experten führen Sie durch praxisnahe Anwendungsbeispiele und zeigen, wie edConnect das digitale Erlebnis Ihrer Institution transformieren kann."
+                    "title": "Praktische Anwendungsbeispiele",
+                    "description": "Probieren geht über Studieren. Unser Team bietet Ihnen eine individuelle Demo von edConnect, die speziell auf die Bedürfnisse Ihrer Einrichtung zugeschnitten ist. Egal, ob Sie an einem bestimmten Modul interessiert sind oder den vollständigen Umfang von edConnect kennenlernen möchten. Unsere Experten führen Sie durch praxisnahe Anwendungsbeispiele und zeigen, wie edConnect die digitalisierung in Ihrer Einrichtung voranbringen kann."
                 }
             },
             "advancedCustomization": {
                 "title": "Erweiterte Anpassung (Preis auf Anfrage)",
                 "customModules": {
-                    "title": "Kundenspezifische Module",
-                    "description": "Jede Institution bringt ihre eigenen Herausforderungen und Chancen mit sich. Wir arbeiten eng mit Ihnen zusammen, um kundenspezifische Module zu entwickeln, die sich nahtlos in die edConnect-Plattform integrieren. Von spezialisierten Kommunikationstools bis hin zu einer einzigartigen Login-Oberfläche – wir erstellen Lösungen, die perfekt zu Ihren bestehenden Prozessen und Ihrer zukünftigen Vision passen."
+                    "title": "Individuelle Module",
+                    "description": "Jede Einrichtung hat ihre eigenen Herausforderungen und Möglichkeiten. Wir arbeiten eng mit Ihnen zusammen, um individuelle Module zu entwickeln, die sich nahtlos in die edConnect-Plattform integrieren. Von spezialisierten Kommunikationstools bis hin zu einer einzigartigen Login-Oberfläche ist alles möglich. Wir erstellen Lösungen, die perfekt zu Ihren bestehenden Prozessen und Ihrer zukünftigen Vision passen."
                 },
                 "completeCustomSystems": {
-                    "title": "Komplett angepasste Systeme",
-                    "description": "Manchmal reicht ein einzelnes Modul nicht aus. Wir bieten die Entwicklung kompletter kundenspezifischer Systeme auf Basis des robusten edConnect-Frameworks an. Gemeinsam mit Ihrem Team entwerfen, bauen und implementieren wir eine umfassende Lösung, die alle notwendigen Aspekte abdeckt. Ob Sie einen bestimmten Prozess, wie die Studierendenzulassung, digitalisieren oder einen neuen digitalen Service erstellen möchten – wir finden die passende Lösung."
+                    "title": "Komplette kundenspezifische Systeme",
+                    "description": "Manchmal reicht ein einzelnes Modul nicht aus. Wir bieten die Entwicklung kompletter kundenspezifischer Systeme auf Basis des robusten edConnect-Frameworks an. Gemeinsam mit Ihrem Team entwerfen, erstellen und implementieren wir eine umfassende Lösung, die alle für Sie erforderlichen Bereiche abdeckt. Sei es zur Digitalisierung spezifischer Prozesse wie der Aufnahmeverfahren an Gymnasien oder zur Schaffung eines neuen digitalen Services."
                 }
+            }
+        }
+    },
+    "privacy": {
+        "title": "Datenschutz & Sicherheit",
+        "description": "Wir legen großen Wert auf Datenschutz, Compliance und Sicherheit und stellen sicher, dass unsere Plattform den höchsten Standards entspricht, einschließlich der DSGVO und US-Datenschutzgesetzen.",
+        "components": {
+            "compliance": {
+                "title": "Compliance & Datensicherheit",
+                "encryption": {
+                    "title": "🔒 Sichere Datenverschlüsselung",
+                    "description": "Alle Daten werden während der Übertragung (TLS 1.2+/1.3) und im Ruhezustand (AES-256) verschlüsselt."
+                },
+                "gdpr": {
+                    "title": "🌍 DSGVO & US-konform",
+                    "description": "Volle Übereinstimmung mit europäischen, deutschen und US-Datenschutzgesetzen, einschließlich DSGVO, CCPA und TDPSA."
+                },
+                "dataLocation": {
+                    "title": "🖥️ Datenhosting in der EU oder den USA",
+                    "description": "Standardmäßig werden Daten in sicheren, nach ISO 27001 zertifizierten Rechenzentren in Europa oder den USA gehostet, je nach Standort Ihrer Einrichtung."
+                }
+            },
+            "hostingAndEncryption": {
+                "title": "Hosting- und Verschlüsselungsstandards",
+                "edconnectCloud": {
+                    "title": "☁️ edConnect Cloud",
+                    "description": "Gehostet auf unserer sicheren Infrastruktur unter Verwendung von Firebase",
+                    "features": {
+                        "transitEncryption": "Verschlüsselung während der Übertragung: TLS 1.3",
+                        "encryptionAtRest": "Verschlüsselung im Ruhezustand: AES-256",
+                        "multiRegionRedundancy": "Regionenübergreifende Redundanz für hohe Verfügbarkeit"
+                    }
+                },
+                "selfHosted": {
+                    "title": "🏢 Self-Hosted",
+                    "description": "Gehostet auf den Servern Ihrer Einrichtung unter Verwendung von Appwrite",
+                    "features": {
+                        "transitEncryption": "Verschlüsselung während der Übertragung: TLS 1.2+",
+                        "encryptionAtRest": "Verschlüsselung im Ruhezustand: AES-256",
+                        "localInfrastructure": "Volle Kontrolle über Infrastruktur & Compliance",
+                        "localRegulation": "Ideal zur Einhaltung lokaler Vorschriften"
+                    }
+                }
+            },
+            "accessControl": {
+                "title": "Zugriffskontrolle",
+                "cardTitle": "🛠 Feingranulare Berechtigungen & kontrollierter Zugriff",
+                "description": "Schulen steuern, dank feingranularer Berechtigungen, wer auf welche Daten und Funktionen zugreifen darf. Lehrkräfte zum Beispiel erhalten keinen Zugriff auf persönliche E-Mails oder Dateien der Schüler, sodass klare Grenzen gewahrt und die Privatsphäre geschützt wird."
+            },
+            "cta": {
+                "title": "Ihre Privatsphäre, Ihre Wahl",
+                "descriptionPartOne": "Möchten Sie mehr erfahren? Lesen Sie unsere",
+                "descriptionPartTwo": "vollständige Datenschutzerklärung",
+                "descriptionPartThree": "oder wenden Sie sich bei Fragen an unseren Datenschutzbeauftragten:"
             }
         }
     }

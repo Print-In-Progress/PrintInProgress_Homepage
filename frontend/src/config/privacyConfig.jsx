@@ -1,33 +1,62 @@
-export const useFeatureGroup1 = () => {
+import { useTranslation } from "react-i18next";
+
+export const useCompliance = () => {
+  const { t } = useTranslation("whyedconnect");
   return [
     {
-      title: "Feature 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: t("privacy.components.compliance.encryption.title"),
+      description: t("privacy.components.compliance.encryption.description"),
     },
     {
-      title: "Feature 2",
+      title: t("privacy.components.compliance.gdpr.title"),
       description:
-        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        t("privacy.components.compliance.gdpr.description"),
     },
     {
-      title: "Feature 3",
+      title: t("privacy.components.compliance.dataLocation.title"),
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        t("privacy.components.compliance.dataLocation.description"),
     },
   ];
 };
 
-export const useFeatureGroup2 = () => {
+export const useHostingAndEncryptionStandards = () => {
+  const { t } = useTranslation("whyedconnect");
+
+
+  const edconnectCloudFeatures = Object.values(
+    t("privacy.components.hostingAndEncryption.edconnectCloud.features", {
+      returnObjects: true,
+    })
+  );
+
+  const selfHostedFeatures = Object.values(
+    t("privacy.components.hostingAndEncryption.selfHosted.features", {
+      returnObjects: true,
+    })
+  );
+
+
   return [
     {
-      title: "Category 1",
-      description: "Main description text goes here.",
-      list: ["Feature point 1", "Feature point 2", "Feature point 3"],
+      title: t("privacy.components.hostingAndEncryption.edconnectCloud.title"),
+      description: t("privacy.components.hostingAndEncryption.edconnectCloud.description"),
+      list: edconnectCloudFeatures,
     },
     {
-      title: "Category 2",
-      description: "Main description text goes here.",
-      list: ["Feature point 1", "Feature point 2", "Feature point 3"],
+      title: t("privacy.components.hostingAndEncryption.selfHosted.title"),
+      description: t("privacy.components.hostingAndEncryption.selfHosted.description"),
+      list: selfHostedFeatures,
+    },
+  ];
+};
+
+export const useAccessAndControl = () => {
+  const { t } = useTranslation("whyedconnect");
+  return [
+    {
+      title: t("privacy.components.accessControl.cardTitle"),
+      description: t("privacy.components.accessControl.description"),
     },
   ];
 };

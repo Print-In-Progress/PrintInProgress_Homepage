@@ -34,5 +34,59 @@
                 }
             }
         }
+    },
+    "privacy": {
+        "title": "Privacy & Securuity",
+        "description": "We prioritize data protection, compliance, and security, ensuring that our platform meets the highest standards, including GDPR (DSGVO) and US Privacy Laws.",
+        "components": {
+            "compliance": {
+                "title": "Compliance & Data Security",
+                "encryption": {
+                    "title": "🔒 Secure Data Encryption",
+                    "description": "All data is encrypted in transit (TLS 1.2+/1.3) and at rest (AES-256)."
+                },
+                "gdpr": {
+                    "title": "🌍 GDPR & US Compliant",
+                    "description": "Full compliance with European and US privacy laws, including GDPR and CCPA and TDPSA."
+                },
+                "dataLocation": {
+                    "title": "🖥️ Data Hosting in the EU or US",
+                    "description": "By default, data is hosted in secure ISO 27001 certified European or US data centers when using our cloud, depending on your location."
+                }
+            },
+            "hostingAndEncryption": {
+                "title": "Hosting & Encryption Standards",
+                "edconnectCloud": {
+                    "title": "☁️ edConnect Cloud",
+                    "description": "Hosted on our secure infrastructure using Firebase",
+                    "features": {
+                        "transitEncryption": "Encryption in Transit: TLS 1.3",
+                        "encryptionAtRest": "Encryption at Rest: AES-256",
+                        "multiRegionRedundancy": "Multi-region redundancy for high availability"
+                    }
+                },
+                "selfHosted": {
+                    "title": "🏢 Self-Hosted",
+                    "description": "Deployed on your institution's own servers using Appwrite",
+                    "features": {
+                        "transitEncryption": "Encryption in Transit: TLS 1.2+",
+                        "encryptionAtRest": "Encryption at Rest: AES-256",
+                        "localInfrastructure": "Full control over infrastructure & compliance",
+                        "localRegulation": "Ideal for compliance with local regulations"
+                    }
+                }
+            },
+            "accessControl": {
+                "title": "Access Control",
+                "cardTitle": "🛠 Granular Permissions & Controlled Access",
+                "description": "Schools control who accesses what data and features through fine-grained permissions. Teachers cannot access students' personal emails or files, maintaining clear boundaries and protecting individual privacy."
+            },
+            "cta": {
+                "title": "Your Privacy, Your Choice",
+                "descriptionPartOne": "Want the details? Read our",
+                "descriptionPartTwo": "full Privacy Policy",
+                "descriptionPartThree": "or reach out to our data protection officer for any questions:"
+            }
+        }
     }
 }
